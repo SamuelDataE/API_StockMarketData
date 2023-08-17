@@ -4,7 +4,7 @@ This repository demonstrates how to download stock market data via an API. The s
 
 This endeavor has been achieved using three different methods:
 
-*Verlinkung --> Ordner*
+***Verlinkung --> Ordner***
 
 
 1. On a web-based platform using pre-built services (no coding required)
