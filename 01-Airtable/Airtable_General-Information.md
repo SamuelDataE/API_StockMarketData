@@ -1,4 +1,4 @@
-## General information about Airtable
+# General information about Airtable
 <br><br>
 Airtable is a cloud-based collaboration platform that combines the functionality of a spreadsheet with a database. It allows users to create and organize information in customizable tables, making it easy to track, manage, and collaborate on various types of data and projects. In our particular case, it offers the advantage that you don't have to programme anything yourself.
 
@@ -20,7 +20,7 @@ The end result is a database with daily records on the requested shares.
 
 <br><br><br><br>
 
-### Running costs
+## Running costs
 <br>
 
 | Application  | Free Version  | Note          |
