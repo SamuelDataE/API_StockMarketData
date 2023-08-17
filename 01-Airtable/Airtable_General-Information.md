@@ -18,9 +18,17 @@ The end result is a database with daily records on the requested shares.
 <br><br>
 ![Alt Image Text](./Images/Airtable_Setup36.png "Setup36")
 
+<br><br><br><br>
 
 ### Running costs
+<br>
+> **Airtable**        For free
+> **Data Fetcher**    Free version available - but probably not enough capacity for runs. Version for 24 USD is sufficient for collecting data of about 50 shares.
+> **Zapier**          For Free
+<br><br>
+Here the detailed costs of Data Fetcher: [Pricing](https://airtable.com/signup](https://datafetcher.com/).  
+<br>
+![Alt Image Text](./Images/Airtable_Setup9.png "Setup9")
 
-Subscriptions
 
 
