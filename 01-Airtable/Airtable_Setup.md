@@ -7,7 +7,7 @@ Open an account with Airtable - you can do this under the following [link](https
 ![Alt Image Text](./Images/Airtable_Login1.png "Login")
 
 
-
+<br><br>
 
 
 When you are logged in, the app looks like the image below. Now open a new **base**.
@@ -15,7 +15,7 @@ When you are logged in, the app looks like the image below. Now open a new **bas
 ![Alt Image Text](./Images/Airtable_Setup.png "Setup")
 
 
-
+<br><br>
 
 
 When a new base is opened, Airtable creates an Excel-like interface with a table. In the first column of the table, the symbols of the respective shares of which you want to build a history can be entered. How to determine the symbols of the respective shares is described under [Alpha-Vantage_Stock Selection](../00-Alpha_Vantage/Alpha-Vantage_Stock-Selection.md).
