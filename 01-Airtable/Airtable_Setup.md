@@ -187,9 +187,67 @@ After connection your accounts click on **contine**.
 
 <br><br><br><br>
 
-After connection your accounts click on **contine**. 
+Under the section **Trigger** select the respective options - see figure below. 
+In Table 1 in Airtable, the **Last modified time** column is always updated as soon as the data is reloaded. This is the trigger when Zapier is to copy the data into the second table. This process ensures that no data is loaded twice into the second table.
 <br><br>
 ![Alt Image Text](./Images/Airtable_Setup25.png "Setup25")
+
+<br><br><br><br>
+
+Test the setup. If everything is set correctly, a record should appear. **Continue with selected record**.
+<br><br>
+![Alt Image Text](./Images/Airtable_Setup26.png "Setup26")
+
+<br><br><br><br>
+
+The representation of the process flow should now look like the following figure. Click on **2. Untitled Step** to setup the second step.
+<br><br>
+![Alt Image Text](./Images/Airtable_Setup27.png "Setup27")
+
+<br><br><br><br>
+
+In the new window select **Airtable** again.
+<br><br>
+![Alt Image Text](./Images/Airtable_Setup28.png "Setup28")
+
+<br><br><br><br>
+
+The selection bar on the right-hand side opens. Select **Create Record** as event and **Continue**.
+<br><br>
+![Alt Image Text](./Images/Airtable_Setup29.png "Setup29")
+
+<br><br><br><br>
+
+Since you are already linked to your Airtable account there is now second login required. **Continue**.
+<br><br>
+![Alt Image Text](./Images/Airtable_Setup30.png "Setup30")
+
+<br><br><br><br>
+
+Under the section **Action** select your base and second table where you want to have the database. Allocate the data to the respective fields. In case the naming of your second table in Airtable is incorrect or doesn't make sense - please adjust and refresh. **Continue**.
+<br><br>
+![Alt Image Text](./Images/Airtable_Setup31.png "Setup31")
+
+<br><br><br><br>
+
+Test the setup. If everything seems okay, click on **Publish**.
+<br><br>
+![Alt Image Text](./Images/Airtable_Setup32.png "Setup32")
+
+<br><br><br><br>
+
+The process flow looks now like follow and is complete.
+<br><br>
+![Alt Image Text](./Images/Airtable_Setup33.png "Setup33")
+
+<br><br><br><br>
+
+Everything is done and from now on the stock exchange data will be loaded daily in your first table and the updated data will be added daily in the second table.The second table, which represents your database, will then look like this over time: 
+<br><br>
+![Alt Image Text](./Images/Airtable_Setup36.png "Setup36")
+
+
+
 
 
 
