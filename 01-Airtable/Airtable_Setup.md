@@ -20,7 +20,45 @@ When a new base is opened, Airtable creates an Excel-like interface with a table
 
 <br><br><br><br>
 
+In order to download the data from Alpha Vantage, the add-on application Data Fetcher is required in Airtable. This tool can be added via **extensions**.
+<br><br>
+![Alt Image Text](./Images/Airtable_Setup2.png "Setup2")
 
+<br><br><br><br>
+
+Search for the tool "Data Fetcher" and add the application.
+<br><br>
+![Alt Image Text](./Images/Airtable_Setup3.png "Setup3")
+
+<br><br><br><br>
+
+Register with the Data Fetcher application. There is a basic version which is free of charge. 
+<br><br>
+![Alt Image Text](./Images/Airtable_Setup4.png "Setup4")
+
+<br><br><br><br>
+
+Start your first request with Data Fetcher.
+<br><br>
+![Alt Image Text](./Images/Airtable_Setup5.png "Setup5")
+
+<br><br><br><br>
+
+1. Name the process
+2. Select **Custom**
+3. Enter the following Link
+   ```
+   https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=EMMI&apikey=demo
+   ```
+4. Replace **demo** with your personal API key. How to get an API Key is explained [here](../00-Alpha_Vantage/Alpha-Vantage_General-Information.md).
+5. Click on the + sign next to IBM. 
+<br><br>
+![Alt Image Text](./Images/Airtable_Setup6.png "Setup6")
+
+<br><br><br><br>
+
+
+<br><br>
 
 
 
