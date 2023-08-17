@@ -26,7 +26,7 @@ In order to download the data from Alpha Vantage, the add-on application Data Fe
 
 <br><br><br><br>
 
-Search for the tool "Data Fetcher" and add the application.
+Search for the tool **Data Fetcher** and add the application.
 <br><br>
 ![Alt Image Text](./Images/Airtable_Setup3.png "Setup3")
 
