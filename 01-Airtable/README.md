@@ -12,4 +12,4 @@ If in some files the images are displayed too small, please click on the images 
 1. Schauen obs Funktioniert
 2. Korrigieren: Zapier ist kein Add-On
 3. Schauen, ob Zapier kostenlos ist (die ersten Tage einfach kostenlos)
-4. 
+4. Koste aufführen in General Setup
