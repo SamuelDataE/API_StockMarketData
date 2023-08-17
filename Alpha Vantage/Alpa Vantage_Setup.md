@@ -6,14 +6,14 @@
 ## Setup - API Key
 To download data from Alpha Vantage, you need a personal API key. You can request this at [Alpha Vantage Support](https://www.alphavantage.co/support/#api-key). Once you have entered your details, a code will be generated below. It is important that you save this code with you.
 
-![Request API Key](/images/Alpha Vantage_v1/AV_APIKEY.png)
+![Alt Image Text](./Images/AV_APIKEY.png "Request API Key")
 
 ## What data to download
 From Alpha Vantage, you can download data such as real-time stock prices, historical price data, forex rates, cryptocurrency data, and technical indicators, which can be used for financial market analysis and trading strategy development.
 
 The procedure for querying the necessary data is detailed in Alpha Vantage's [documentation](https://www.alphavantage.co/documentation/). In our scenario, we intend to download daily stock market data for various stocks. Hence, we utilize the Quote Endpoint for each respective stock. The code marked below illustrates the implementation.
 
-![Request Code](/images/Alpha Vantage_v1/AV_Documentation.png)
+![Alt Image Text](./Images/AV_Dokumentation.png "Request API Key")
 
 This code is used in all three approaches.
 
