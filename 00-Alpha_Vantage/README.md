@@ -1,17 +1,7 @@
-# Downloading stock market data via API
+### General information
 
-This repository demonstrates how to download stock market data via an API. The setup is configured to automatically download the data daily and store it accordingly.
+Relevant files in this folder:
+1. Alpha-Vantage_Setup
+2. Alpha-Vantage_Stock Selection
 
-This endeavor has been achieved using three different methods:
-
-***Verlinkung --> Ordner***
-
-
-1. On a web-based platform using pre-built services (no coding required)
-2. On a pre-configured development environment (involving coding)
-3. On an extensive cloud computing platform (involving coding)
-
-All three approaches involve downloading the same data from the market data provider [Alpha Vantage](https://www.alphavantage.co/#page-top). In terms of complexity, the first case is the easiest method to implement and the third case is the most complex. The process of setting up each of these methods is detailed in this repository.
-
-### Enjoy trying it out!
-
+If in some files the images are displayed too small, please click on the images to zoom in. 
