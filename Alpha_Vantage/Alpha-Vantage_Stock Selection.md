@@ -24,7 +24,7 @@ data = r.json()
 print(data)
 ```
 
-Note that you use your own API key instead of demo. How you can apply for an API key is explained [here](./Alpha%20Vantage/Alpa%20Vantage_Setup.md)
+Note that you use your own API key instead of demo. How you can apply for an API key is explained [here](./Alpha%20Vantage/Alpha-Vantage_Setup.md)
 The "Best Matches" are now listed as a result. In this case, we will use the abbreviation "EMLZF" to query the API.
 
 ![Alt Image Text](./Images/AV_StockSelection2.png "Search EMMI")
