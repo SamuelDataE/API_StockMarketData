@@ -1,4 +1,6 @@
 ### General information
+This folder is about [Alpha Vantage](https://www.alphavantage.co/#page-top). This is the market data provider used for all three methods.
+
 
 Relevant files in this folder:
 1. [Alpha-Vantage_General-Information](Alpha-Vantage_General-Information.md)
