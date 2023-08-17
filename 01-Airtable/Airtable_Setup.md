@@ -1,14 +1,27 @@
-## General information about Airtable
-Airtable is a cloud-based collaboration platform that combines the functionality of a spreadsheet with a database. It allows users to create and organize information in customizable tables, making it easy to track, manage, and collaborate on various types of data and projects. In our particular case, it offers the advantage that you don't have to programme anything yourself.
+# Setup
 
-The following figure shows how the process looks for the daily download of data via API.
 
-1. The data is provided by the market data provider [Alpha Vantage](../00-Alpha_Vantage).
-2. Using the Airtable add-on application Data Fetcher, the data is extracted from Alpha Vantage and stored in Airtable. This is done automatically on a daily basis.  
-3. The first table in Airtable always contains the most recent daily stock data. Whenever there is a change due to a new upload of data, the new data set is loaded into the second table in Airtable via the external tool Zapier.
-4. In this way, the data is collected and cumulated to provide a history of the respective shares. 
+### Airtable
+Open an account with Airtable - you can do this under the following [link](https://airtable.com/signup). Enter your details - the login process should be self-explanatory. 
+<br><br>
+![Alt Image Text](./Images/Airtable_Login1.png "Login")
 
-![Alt Image Text](./Images/Airtable_dataflow1.png "Dataflow")
-  
+<br><br><br><br>
 
-# Airtable setup
+When you are logged in, the app looks like the image below. Now open a new **base**.
+<br><br>
+![Alt Image Text](./Images/Airtable_Setup.png "Setup")
+
+<br><br><br><br>
+
+When a new base is opened, Airtable creates an Excel-like interface with a table. In the first column of the table, the symbols of the respective shares of which you want to build a history can be entered. How to determine the symbols of the respective shares is described under [Alpha-Vantage_Stock Selection](../00-Alpha_Vantage/Alpha-Vantage_Stock-Selection.md).
+<br><br>
+![Alt Image Text](./Images/Airtable_Setup1.png "Setup1")
+
+<br><br><br><br>
+
+
+
+
+
+

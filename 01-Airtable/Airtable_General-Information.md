@@ -11,4 +11,8 @@ The following figure shows how the process looks for the daily download of data 
 ![Alt Image Text](./Images/Airtable_dataflow1.png "Dataflow")
   
 
-# Airtable setup
+### Running costs
+
+Subscriptions
+
+
