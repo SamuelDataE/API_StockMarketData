@@ -242,13 +242,22 @@ The process flow looks now like follow and is complete.
 
 <br><br><br><br>
 
+## Result - final output
+<br><br>
 Everything is done and from now on the stock exchange data will be loaded daily in your first table and the updated data will be added daily in the second table.The second table, which represents your database, will then look like this over time: 
 <br><br>
 ![Alt Image Text](./Images/Airtable_Setup36.png "Setup36")
 
+<br><br><br><br><br><br>
 
-
-
+## Managing Data Fetcher
+<br><br>
+Under Data Fetchr [profile](https://datafetcher.com/profile) you are able to see the details about your runs. Click on **Manage**.  
+<br><br>
+![Alt Image Text](./Images/Airtable_Setup34.png "Setup34")
+<br><br><br>
+Here you see how many runs you have already used this month.
+![Alt Image Text](./Images/Airtable_Setup35.png "Setup35")
 
 
 
