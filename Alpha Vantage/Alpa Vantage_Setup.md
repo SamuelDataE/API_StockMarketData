@@ -7,7 +7,8 @@
 To download data from Alpha Vantage, you need a personal API key. You can request this at [Alpha Vantage Support](https://www.alphavantage.co/support/#api-key). Once you have entered your details, a code will be generated below. It is important that you save this code with you.
 
 ![Request API Key](/images/Alpha Vantage_v1/AV_APIKEY.png)
-![Alt Image Text](./images/AV_APIKEY.png "Lightsail Homepage")
+
+![Alt Image Text](./Images/AV_APIKEY.png "Lightsail Homepage")
 
 ## What data to download
 From Alpha Vantage, you can download data such as real-time stock prices, historical price data, forex rates, cryptocurrency data, and technical indicators, which can be used for financial market analysis and trading strategy development.
