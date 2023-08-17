@@ -13,7 +13,7 @@ From Alpha Vantage, you can download data such as real-time stock prices, histor
 
 The procedure for querying the necessary data is detailed in Alpha Vantage's [documentation](https://www.alphavantage.co/documentation/). In our scenario, we intend to download daily stock market data for various stocks. Hence, we utilize the Quote Endpoint for each respective stock. The code marked below illustrates the implementation.
 
-![Alt Image Text](./Images/AV_Documentation.png "Request API Key")
+![Alt Image Text](./Images/AV_Dokumentation.png "Request API Key")
 
 This code is used in all three approaches.
 
