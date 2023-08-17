@@ -7,7 +7,7 @@ The following figure shows how the process looks for the daily download of the d
 2. the Airtable add-on application Data Fetcher is needed to run this job automatically on a daily basis. 
 3. The daily stock market data of all the stocks we are searching for are now always loaded into an Airtable table. This data is then loaded daily into a second Airtable table using the second add-on tool Zapier. In this way, we collect the data there in order to be able to accumulate a history of the respective shares. 
 
-![Alt Image Text](./Images/Airtable_dataflow.png "Dataflow")
+![Alt Image Text](./Images/Airtable_dataflow1.png "Dataflow")
   
 
 # Airtable setup
