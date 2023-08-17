@@ -3,7 +3,7 @@ Airtable is a cloud-based collaboration platform that combines the functionality
 
 The following figure shows how the process looks for the daily download of the data.
 
-1. The data is provided by [Alpha Vantage](./00. Alpha_Vantage). They are stored in the Airtable database using Alpha Vantage's API. 
+1. The data is provided by [Alpha Vantage](./00.%20Alpha_Vantage). They are stored in the Airtable database using Alpha Vantage's API. 
 2. Airtable add-on application Data Fetcher is needed to run this job automatically on a daily basis. 
 3. The daily stock market data of all the stocks we are searching for are now always loaded into an Airtable table. This data is then loaded daily into a second Airtable table using the second add-on tool Zapier. In this way, we collect the data there in order to be able to accumulate a history of the respective shares. 
 
