@@ -1,8 +1,11 @@
-# Downloading Stock Market Data via API
+# Downloading stock market data via API
 
 This repository demonstrates how to download stock market data via an API. The setup is configured to automatically download the data daily and store it accordingly.
 
 This endeavor has been achieved using three different methods:
+
+***Verlinkung --> Ordner***
+
 
 1. On a web-based platform using pre-built services (no coding required)
 2. On a pre-configured development environment (involving coding)
