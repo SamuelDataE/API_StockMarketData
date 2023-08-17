@@ -1,4 +1,4 @@
-## General information about Airtable
+# General information about Airtable
 Airtable is a cloud-based collaboration platform that combines the functionality of a spreadsheet with a database. It allows users to create and organize information in customizable tables, making it easy to track, manage, and collaborate on various types of data and projects. In our particular case, it offers the advantage that you don't have to programme anything yourself.
 
 The following figure shows how the process looks for the daily download of data via API.
@@ -11,4 +11,5 @@ The following figure shows how the process looks for the daily download of data 
 ![Alt Image Text](./Images/Airtable_dataflow1.png "Dataflow")
   
 
-# Airtable setup
+## Airtable setup
+
