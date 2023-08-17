@@ -26,7 +26,7 @@ The end result is a database with daily records on the requested shares.
 | Application  | Free Version  | Note          |
 |-----------   |---------------|---------------|
 | Airtable     | yes           |  |
-| Data Fetcher | (yes)         | Free version available - but probably not enough capacity for runs. Version for 24 USD is sufficient for collecting data of about 50 shares.        |
+| Data Fetcher | (yes)         | Free version available - but probably not enough capacity for runs. Subscription for 24 USD per month is sufficient for collecting data of about 50 shares.        |
 | Zapier       | yes           |           |
 
 <br><br>
