@@ -1,5 +1,5 @@
 ### General information
-This folder is about [Alpha Vantage](https://www.alphavantage.co/#page-top). This is the market data provider used for all three methods.
+This folder is about [Alpha Vantage](https://www.alphavantage.co/#page-top). In all three methods, the data source is Alpha Vantage. In principle, however, this data provider can simply be changed - the principle works the same with most API providers. 
 
 
 Relevant files in this folder:
