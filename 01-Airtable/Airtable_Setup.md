@@ -59,7 +59,7 @@ Start your first request with Data Fetcher.
 
 <br><br><br><br>
 
-1. Select the respecitve table in the drop down selection. If you didn't change the name manuelly its called **Table 1**.
+1. Select the table where you have entered your stock symbols. If you didn't change the name manually the table is called **Table 1**.
 2. Select the column/field name where you have entered the symbols of your shares. If you didn't change the field manually its called **Name**.
 3. Confirm selections.
 <br><br>
