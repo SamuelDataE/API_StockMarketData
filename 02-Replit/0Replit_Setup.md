@@ -38,7 +38,7 @@ Once you have created your Repl, the following screen appears in which you manag
 
 <br><br><br><br>
 
-Before we start writing the Python script, we first create some support files that are necessary for the script to run. On the left side next to **Files** it has a **+** sign. Click on this sign and create a new file with the name **config.txt**. 
+Before we start writing the Python script, we first create some support files that are necessary for the script to run. On the left side next to **Files** there is a **+** sign. Click on this sign and create a new file with the name **config.txt**. 
 <br><br>
 ![Alt Image Text](./Images/RP_Setup5.png "Setup5")
 
