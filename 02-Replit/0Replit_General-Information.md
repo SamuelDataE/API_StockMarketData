@@ -17,6 +17,8 @@ The following figure shows how the process looks for the daily download of data 
 The end result is a database with daily records on the requested shares. 
 <br><br>
 ![Alt Image Text](./Images/RP_Database.png "Result")
+<br><br>
+This data can be downloaded in a csv file.
 
 <br><br><br><br>
 
@@ -32,4 +34,4 @@ The end result is a database with daily records on the requested shares.
 
 Here the detailed costs of Replit: [Pricing](https://replit.com/pricing).  
 <br>
-![Alt Image Text](./Images/RP:Pricing.png "Pricing")
+![Alt Image Text](./Images/RP_Pricing.png "Pricing")
