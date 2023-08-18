@@ -113,7 +113,7 @@ We are now back in the original mask of our **base**. The table has now been com
 
 <br><br><br><br>
 
-Choose an name for the new column and select **All editable fields**. Then click on **Create filed**.
+Choose an name for the new column and select **All editable fields**. Then click on **Create field**.
 <br><br>
 ![Alt Image Text](./Images/Airtable_Setup14.png "Setup14")
 
