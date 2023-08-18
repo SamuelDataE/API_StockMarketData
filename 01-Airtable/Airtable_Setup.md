@@ -89,10 +89,10 @@ Each listed stock symbol generates one **run** daily. However, only 100 runs are
 1. New Windows opens - click on **Filter all**.
 2. Select all fields/columns with the information you want to have about the shares.
    In this example the following fields have been selected:
-   > Global Quote symbol
-   > Global Quote price
-   > Global Quote volume
-   > Global Quote latest trading day 
+   * Global Quote symbol
+   * Global Quote price
+   * Global Quote volume
+   * Global Quote latest trading day 
 3. Click on **Save & run**
 <br><br>
 ![Alt Image Text](./Images/Airtable_Setup11.png "Setup11")
