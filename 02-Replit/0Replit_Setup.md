@@ -38,7 +38,7 @@ Once you have created your Repl, the following screen appears in which you manag
 
 <br><br><br><br>
 
-Before we start writing the Python script, we first create some support files that are necessary for the script to run. On the left side next to **Files** there is a **+** sign. Click on this sign and create a new file with the name **config.txt**. 
+Before we start writing the Python script, we first create some support files that are necessary for the script to run. On the left side next to **Files** there is a **+** sign. Click on this sign and create a new file with the name ```config.txt```. 
 <br><br>
 ![Alt Image Text](./Images/RP_Setup5.png "Setup5")
 
@@ -50,7 +50,7 @@ Open this new file and enter in the code section ```API_KEY=``` as well as your 
 
 <br><br><br><br>
 
-Create now a second file with the name **symbols.txt**.  
+Create now a second file with the name ```symbols.txt```.  
 <br><br>
 ![Alt Image Text](./Images/RP_Setup7.png "Setup7")
 
@@ -62,7 +62,7 @@ In this file you can now enter all the symbols of the shares from which you want
 
 <br><br><br><br>
 
-Create a further file named **requirements.txt**. Enter in this file **Flask** and on a new line **requests**. Our Python code uses the external **flask** and **request** libraries. By creating these files, we ensure that these programmes are automatically installed.
+Create a further file named ```requirements.txt```. Enter in this file ```Flask``` and on a new line ```requests```. Our Python code uses the external **flask** and **request** libraries. By creating these files, we ensure that these programmes are automatically installed.
 <br><br>
 ![Alt Image Text](./Images/RP_Setup9.png "Setup9")
 
