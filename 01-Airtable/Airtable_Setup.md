@@ -1,6 +1,6 @@
 # Setup
 
-<br><br><br><br>
+<br><br>
 
 ### Airtable
 <br><br>
