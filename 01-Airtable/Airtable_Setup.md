@@ -119,7 +119,7 @@ Choose an name for the new column and select **All editable fields**. Then click
 
 <br><br><br><br>
 
-The column should now look like the illustration below.
+The table should now look like the illustration below.
 <br><br>
 ![Alt Image Text](./Images/Airtable_Setup15.png "Setup15")
 
