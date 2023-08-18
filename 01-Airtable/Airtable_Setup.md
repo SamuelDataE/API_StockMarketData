@@ -246,7 +246,7 @@ The process flow looks now like follow and is complete. To finalise the setup yo
 
 ## Result - final output
 <br><br>
-Everything is done and from now on the stock exchange data will be loaded daily in your first table and the updated data will be added daily in the second table.The second table, which represents your database, will then look like this over time: 
+Everything is done and from now on the stock exchange data will be loaded daily in your first table and the updated data will be added daily in the second table. The second table, which represents your database, will then look like this over time: 
 <br><br>
 ![Alt Image Text](./Images/Airtable_Setup36.png "Setup36")
 
