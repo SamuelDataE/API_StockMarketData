@@ -27,7 +27,7 @@ This data can be downloaded in a csv file.
 
 | Application  | Free Version  | Note          |
 |-----------   |---------------|---------------|
-| REPLIT     | (yes)       | The "Hacker" subscription is required as the "Always On" functionality is required in the process. |
+| REPLIT     | (yes)       | The "Hacker" subscription is required as the "Always On" functionality is required in the process. This subscription costs USD 7 per month. |
 | CRONJOB.DE | yes         | |
 
 <br><br>
