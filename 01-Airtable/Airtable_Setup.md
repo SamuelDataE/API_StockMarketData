@@ -16,7 +16,7 @@ When you are logged in, the app looks like the image below. Now open a new **bas
 
 <br><br><br><br>
 
-When a new base is opened, Airtable creates an Excel-like interface with a table. In the first column of the table, the symbols of the respective shares of which you want to build a history can be entered. How to determine the symbols of the respective shares is described under [Alpha-Vantage_Stock Selection](../00-Alpha_Vantage/Alpha-Vantage_Stock-Selection.md).
+When a new base is opened, Airtable creates an Excel-like interface with a table. You can now give your base a name. In this example I have given the name **StockMarketData**. In the first column of the table, the symbols of the respective shares of which you want to build a history can be entered. How to determine the symbols of the respective shares is described under [Alpha-Vantage_Stock Selection](../00-Alpha_Vantage/Alpha-Vantage_Stock-Selection.md).
 <br><br>
 ![Alt Image Text](./Images/Airtable_Setup1.png "Setup1")
 
