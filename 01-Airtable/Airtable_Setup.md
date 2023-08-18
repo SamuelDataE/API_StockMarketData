@@ -238,7 +238,7 @@ Test the setup. If everything seems okay, click on **Publish**.
 
 <br><br><br><br>
 
-The process flow looks now like follow and is complete. To finalise the step you can name the procedure in Zapier.
+The process flow looks now like follow and is complete. To finalise the setup you can name the procedure in Zapier.
 <br><br>
 ![Alt Image Text](./Images/Airtable_Setup33.png "Setup33")
 
