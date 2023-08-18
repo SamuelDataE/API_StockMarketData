@@ -73,7 +73,7 @@ Set up the scheduled request. The data should be requested every day in the morn
 
 <br><br><br><br>
 
-Each listed stock symbol generates one **run** daily. However, only 100 *runs** are included in the free basic version. It is therefore very quickly necessary to upgrade. This can be done directly at Data Fetcher under [Pricing](https://datafetcher.com/). The costs for the respective versions are as shown in the figure below. 
+Each listed stock symbol generates one **run** daily. However, only 100 runs are included in the free basic version. It is therefore very quickly necessary to upgrade. This can be done directly at Data Fetcher under [Pricing](https://datafetcher.com/). The costs for the respective versions are as shown in the figure below. 
 <br><br>
 ![Alt Image Text](./Images/Airtable_Setup9.png "Setup9")
 
