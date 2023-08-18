@@ -15,12 +15,6 @@ After you have registered, you will see this screen. To start the project you ha
 
 <br><br><br><br>
 
-After you have registered, you will see this screen. To start the project you have to create your first Repl (short for "Read-Eval-Print Loop"). Click on **Create Repl**.
-<br><br>
-![Alt Image Text](./Images/RP_Setup2.png "Setup2")
-
-<br><br><br><br>
-
 A new windows opens. 
 1. Select Python as a template
 2. Name your Repl
