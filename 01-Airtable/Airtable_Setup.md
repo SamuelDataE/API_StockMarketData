@@ -171,7 +171,7 @@ In the new window that opens, select the **Airtable** option.
 
 <br><br><br><br>
 
-A new selection bar opens on the right-hand side. Select **New or updated record** as the event. Continue.
+A new selection bar opens on the right-hand side. Select **New or Updated Record** as the event. **Continue**.
 <br><br>
 ![Alt Image Text](./Images/Airtable_Setup22.png "Setup22")
 
