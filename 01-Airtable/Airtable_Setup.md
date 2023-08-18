@@ -142,6 +142,7 @@ Adjust the column names as they appear in Table 1. Also adjust the format in the
 In order to be able to add the data from table 1 to our new table, we need the application Zapier. As soon as the data in the first table is updated, this data is added to the second table. The existing data is not overwritten but added. In this way, we build up a database of the respective shares.
 
 Register yourself at [Zapier](https://zapier.com/app/login). Enter your personal details.
+<br><br>
 ![Alt Image Text](./Images/Airtable_Setup17.png "Setup17")
 
 <br><br><br><br>
