@@ -6,7 +6,7 @@ The following figure shows how the process looks for the daily download of data 
 
 1. The data is provided by the market data provider [Alpha Vantage](../00-Alpha_Vantage).
 2. Using the Airtable add-on application Data Fetcher, the data is extracted from Alpha Vantage and stored in Airtable. This is done automatically on a daily basis.  
-3. The first table in Airtable always contains the most recent daily stock data. Whenever there is a change due to a new upload of data, the new data set is loaded into the second table in Airtable via the external tool Zapier.
+3. The first table in Airtable always contains the most recent daily stock data. Whenever there is a change due to a new reload of data, the new data set is loaded into the second table in Airtable via the external tool Zapier.
 4. In this way, the data is collected and cumulated to provide a history of the respective shares. 
 
 ![Alt Image Text](./Images/Airtable_dataflow1.png "Dataflow")
