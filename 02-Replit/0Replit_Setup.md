@@ -407,12 +407,12 @@ Now click on **Run**. A webview will now open on the right-hand side. You will n
 <br><br><br><br>
 
 In summary, the following can be said:
-
+<br><br>
 Code: **Https://apistockmarketdata.samuelhaller.repl.co**    (acc. Replit webview)
   * Checks if the script runs.
   * *Can be triggered when script is executed in Replit (**Run**) or the link is entered on the web.*
   * Gives as response "Welcome to my Flask app!"
-  
+<br><br>  
 Code: **Https://apistockmarketdata.samuelhaller.repl.co/fetchdata**
   * Is executing script and downloads data.
   * *Can only be executed if the link is executed via the web.*
@@ -425,7 +425,7 @@ Example of what it looks like when triggered via the web.
 <br><br>
 Please note, this is only working when the script in Replit is **running**.
 
-
+<br><br><br><br>
 
 
 
