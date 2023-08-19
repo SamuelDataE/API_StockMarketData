@@ -394,7 +394,7 @@ Now copy the code into the script. As this code is the most important, copy the 
 <br><br><br><br>
 
 In order for this code to be called via external web, the script must always be running. In other words, the cloud server must be online so that the script can download the data from Alpha Vantage at all time. To ensure that the script is always running and does not automatically go offline after some time, we must activate **Always On**. To do this, click on the blue Python symbol at the top right. In order to activate this, you must either buy "My Cicles" or make a paid subscription. It is recommended to take the **Hacker** subscription. With this version you also get more storage space in your database. You can find the prices [here](https://replit.com/pricing).
-<br>
+<br><br>
 If you have bought the "My Cicles" or made the Subscription, activate the **Always On**.
 <br><br>
 ![Alt Image Text](./Images/RP_Setup22.png "Setup22")
@@ -408,15 +408,15 @@ Now click on **Run**. A webview will now open on the right-hand side. You will n
 
 In summary, the following can be said:
 
-* Code: **Https://apistockmarketdata.samuelhaller.repl.co**    (acc. Replit webview)
-  Checks if the script runs.
-  *Can be triggered when script is executed in Replit (**Run**) or the link is entered on the web.*
-  Gives as response "Welcome to my Flask app!"
+Code: **Https://apistockmarketdata.samuelhaller.repl.co**    (acc. Replit webview)
+  * Checks if the script runs.
+  * *Can be triggered when script is executed in Replit (**Run**) or the link is entered on the web.*
+  * Gives as response "Welcome to my Flask app!"
   
-* Code: **Https://apistockmarketdata.samuelhaller.repl.co/fetchdata**
-  Is executing script and downloads data.
-  *Can only be executed if the link is executed via the web.*
-  Gives as response "Data fetching completed!"
+Code: **Https://apistockmarketdata.samuelhaller.repl.co/fetchdata**
+  * Is executing script and downloads data.
+  * *Can only be executed if the link is executed via the web.*
+  * Gives as response "Data fetching completed!"
 
 <br><br>
 Example of what it looks like when triggered via the web.
