@@ -140,3 +140,9 @@ If everything works correctly, you will then see the market data of the stocks y
 ![Alt Image Text](./Images/RP_Setup11.png "Setup11")
 
 <br><br><br><br>
+
+The manual download of the data is the first part of the code, which we have in our script. However, we will now add other tasks to the script. In order to execute only one task at a time, however, we need to inactivate the rest of the code. This can be done by excluding the code with the characters ```'''```. As soon as the characters appear orange, these lines are no longer executed. Exclude this code. 
+<br><br>
+![Alt Image Text](./Images/RP_Setup12.png "Setup12")
+
+<br><br><br><br>
