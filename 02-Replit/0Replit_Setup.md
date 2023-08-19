@@ -422,13 +422,18 @@ Code: **Https://apistockmarketdata.samuelhaller.repl.co/fetchdata**
 Example of what it looks like when triggered via the web.
 <br><br>
 ![Alt Image Text](./Images/RP_Setup241.png "Setup241")
-<br><br>
+<br>
 Please note, this is only working when the script in Replit is **running**.
 
 <br><br><br><br>
 
-
-
+### CRONJOB.DE
+<br><br>
+To ensure that the script now runs daily, we now call up the **asdf** page daily with the help of CRONJOB.DE. To do this, we have to register on CRONJOB.DE. The page is in German. You can also use another cronjob provider if you want to have an English page. There are very many providers in this area. 
+<br>
+Register yourself on [CRONJOB.DE](https://www.cronjob.de/anmeldung).
+<br><br>
+![Alt Image Text](./Images/RP_Setup26.png "Setup26")
 
 
 
