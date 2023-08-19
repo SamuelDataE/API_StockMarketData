@@ -430,7 +430,7 @@ Please note, this is only working when the script in Replit is **running**.
 
 ### CRONJOB.DE
 <br><br>
-To ensure that the script now runs daily, we now call up the **asdf** page daily with the help of CRONJOB.DE. To do this, we have to register on CRONJOB.DE. The page is in German. You can also use another cronjob provider if you want to have an English page. There are very many providers in this area. 
+To ensure that the script now runs daily, we now call up the **asdf** page daily with the help of CRONJOB.DE. To do this, we have to register on CRONJOB.DE. The page is in German. You can also use another cronjob provider if you want to have an English page. There are many providers in this area. 
 <br>
 Register yourself on [CRONJOB.DE](https://www.cronjob.de/anmeldung).
 <br><br>
