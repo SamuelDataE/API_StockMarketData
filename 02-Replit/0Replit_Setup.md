@@ -239,6 +239,7 @@ with open(filename, 'w', newline='') as csvfile:
         # Write row to CSV
         csvwriter.writerow(row)
 ```
+<br><br><br><br>
 
 Now add this code under the existing code in the script. **Run** the script.
 <br><br>
