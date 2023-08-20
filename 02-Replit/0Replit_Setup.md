@@ -28,7 +28,7 @@ A new window opens.
 
 <br><br><br><br>
 
-Once you have created your Repl, the following screen appears in which you manage your Repl.There are for different sections:
+Once you have created your Repl, the following screen appears in which you manage your Repl. There are four different sections:
  * Files
  * Tools
  * Script (main.py)
@@ -123,7 +123,7 @@ This script includes the following items:
 
 <br><br><br><br>
 
-Copy now this script into the **main.py** file in Replit. After that click on the **run** button. This is how you execute the script.
+Copy now this script into the **main.py** file in Replit. After that click on the **Run** button. This is how you execute the script.
 <br><br>
 ![Alt Image Text](./Images/RP_Setup101.png "Setup101")
 
@@ -141,9 +141,10 @@ If everything works correctly, you will then see the market data of the stocks y
 
 <br><br><br><br>
 
-The manual download of the data is the first part of the code, which we have in our script. However, we will now add other tasks to the script. In order to execute only one task at a time, however, we need to inactivate the rest of the code. This can be done by excluding the code with the characters ```'''```. As soon as the characters appear orange, these lines are no longer executed. Exclude this code. 
+The manual download of the data is the first part of the code, which we have in our script. However, we will now add other tasks to the script. In order to execute only one task at a time, however, we need to inactivate the rest of the code. This can be done by excluding the code with the characters ```'''```. As soon as the characters appear orange, these lines are no longer executed. Set the code inactive by placing ```'''``` before and after the code. 
 <br><br>
 ![Alt Image Text](./Images/RP_Setup12.png "Setup12")
+<br>
 If there is a **#** at the beginning of a line, then it is a comment. A comment is never executed and serves only as information. 
 
 <br><br><br><br>
@@ -394,9 +395,9 @@ Now copy the code into the script. As this code is the most important, copy the 
 
 <br><br><br><br>
 
-In order for this code to be called via external web, the script must always be running. In other words, the cloud server must be online so that the script can download the data from Alpha Vantage at all time. To ensure that the script is always running and does not automatically go offline after some time, we must activate **Always On**. To do this, click on the blue Python symbol at the top right. In order to activate this, you must either buy "My Cicles" or make a paid subscription. It is recommended to take the **Hacker** subscription. With this version you also get more storage space in your database. You can find the prices [here](https://replit.com/pricing).
+In order for this code to be called via external web, the script must always be running. In other words, the cloud server must be online so that the script can download the data from Alpha Vantage at all time. To ensure that the script is always running and does not automatically go offline after some time, we must activate **Always On**. To do this, click on the blue Python symbol at the top right. In order to activate this, you must either buy "My Cicles" or make a paid subscription. It is recommended to make a **Hacker** subscription. With this subscription you also get more storage space in your database. You can find the prices [here](https://replit.com/pricing).
 <br><br>
-If you have bought the "My Cicles" or made the Subscription, activate the **Always On**.
+If you have bought the "My Cicles" or made the subscription, activate the **Always On** function.
 <br><br>
 ![Alt Image Text](./Images/RP_Setup22.png "Setup22")
 
