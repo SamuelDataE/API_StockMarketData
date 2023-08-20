@@ -430,11 +430,29 @@ Please note, this is only working when the script in Replit is **running**.
 
 ### CRONJOB.DE
 <br><br>
-To ensure that the script now runs daily, we now call up the **asdf** page daily with the help of CRONJOB.DE. To do this, we have to register on CRONJOB.DE. The page is in German. You can also use another cronjob provider if you want to have an English page. There are many providers in this area. 
+To ensure that the script now runs daily, we now call up the **Https://apistockmarketdata.samuelhaller.repl.co/fetchdata**-page *(your URL is different)* daily with the help of CRONJOB.DE. To do this, we have to register on CRONJOB.DE. The page is in German. You can also use another cronjob provider if you want to have an English page. There are many providers in this area. 
 <br>
 Register yourself on [CRONJOB.DE](https://www.cronjob.de/anmeldung).
 <br><br>
 ![Alt Image Text](./Images/RP_Setup26.png "Setup26")
+
+<br><br><br><br>
+
+Click on the button **Neuen CRONJOB anlegen**.
+<br><br>
+![Alt Image Text](./Images/RP_Setup27.png "Setup27")
+
+<br><br><br><br>
+
+1. Name your CRONJOB
+2. Enter your URL address - make sure that the URL starts with **https://** and ends with **/fetchdata**. See example in the figure below.
+3. Define the scheudle
+4. Safe CRONJOB. **CRONJOB speichern**
+<br><br>
+![Alt Image Text](./Images/RP_Setup27.png "Setup27")
+
+<br><br><br><br>
+
 
 
 
