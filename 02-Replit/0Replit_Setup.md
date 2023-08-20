@@ -510,7 +510,7 @@ Afterwards, check whether all keys have been deleted from your database.
 ## Here a quick summary about the setup
 
 <br><br><br>
-# Web links
+### Web links
 
 <br>
 
@@ -537,7 +537,7 @@ Code: **Https://apistockmarketdata.samuelhaller.repl.co/cronjob_78641.html**
 *Please have in mind, that your URL link looks different since the code is depending on your project and user name (and Verification number from CRONJOB.DE).*
 
 <br><br><br>
-# Python script - different codes
+### Python script - different codes
 
 <br>
 
@@ -548,6 +548,8 @@ In our script we have the following codes:
 3. Viewing the database
 4. Creation of a csv file
 5. Deleting the database
+
+<br><br>
 
 Make sure of the following:
  * That the script is **always** running. If the script is not running, nothing can be triggered via the web.
