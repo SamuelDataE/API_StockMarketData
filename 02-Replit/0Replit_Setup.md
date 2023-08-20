@@ -15,11 +15,11 @@ After you have registered, you will see this screen. To start the project you ha
 
 <br><br><br><br>
 
-A new windows opens. 
+A new window opens. 
 1. Select Python as a template
 2. Name your Repl
-3. Decide if you want to have a private or public Repl
-   Difference:
+3. Decide if you want to have a private or public Repl<br>
+   Difference:<br>
    For a public Repl, other users can see your code, but they cannot directly modify it. However, they can create their own copy (Fork) of the Repl and make changes to that copy without affecting your original code.
    With a private Repl, no one except you (or those you explicitly grant access to) can see or modify the code. For a private Repl, you must have a paid user subscription.
 4. **Create Repl**
