@@ -438,6 +438,12 @@ Register yourself on [CRONJOB.DE](https://www.cronjob.de/anmeldung).
 
 <br><br><br><br>
 
+In the **Home** menu, click on **Cronjobs**.
+<br><br>
+![Alt Image Text](./Images/RP_Setup261.png "Setup261")
+
+<br><br><br><br>
+
 Click on the button **Neuen CRONJOB anlegen**.
 <br><br>
 ![Alt Image Text](./Images/RP_Setup27.png "Setup27")
@@ -449,22 +455,103 @@ Click on the button **Neuen CRONJOB anlegen**.
 3. Define the scheudle
 4. Safe CRONJOB. **CRONJOB speichern**
 <br><br>
-![Alt Image Text](./Images/RP_Setup27.png "Setup27")
+![Alt Image Text](./Images/RP_Setup28.png "Setup28")
 
 <br><br><br><br>
 
+After setting up the cronjob, you will be prompted to run a verification. This is asked to ensure that you are authorised to create this cronjob for the relevant server (Replit). 
+<br>
+In this example, we must now create an html file in Replit with the name **cronjob_788641.html**. This file should contain the content **cronjob.de**. Before you click on the **Prüfung jetzt durchführen** button, you can check manually with the shown link (**Https://apistockmarketdata.samuelhaller.repl.co/cronjob_78641.html**) whether the verification works. We do this at a later step when the file is created.  
+<br><br>
+![Alt Image Text](./Images/RP_Setup32.png "Setup32")
 
+<br><br><br><br>
 
+Go back to your Repl and open a html file. In my case it is called **cronjob_78641.html** - you will have a different number. Then open the file and put ```cronjob.de``` in it. 
+<br><br>
+![Alt Image Text](./Images/RP_Setup29.png "Setup29")
 
+<br><br><br><br>
 
+Now go back to the script (**main.py**) and scroll down in the code to **@app.route('/cronjob_78641.html')**. Now change the number to match the title of your html file. Then click on **Run**.
+<br><br>
+![Alt Image Text](./Images/RP_Setup30.png "Setup30")
 
-Mit welchem Link wird was gemacht....
+<br><br><br><br>
 
+Now enter your link (in my case:**Https://apistockmarketdata.samuelhaller.repl.co/cronjob_78641.html**) which was shown in CRONJOB.DE in the web browser. If the result is **cronjob.de**, everything works. Otherwise, check the previous steps again.
+<br><br>
+![Alt Image Text](./Images/RP_Setup31.png "Setup31")
 
+<br><br><br><br>
 
-Auflistung, welche Codes im Skript enthalten sind.
-Reminder - damits lauft. immer auf *RUN* und erster Teil aktiv - rest ausgeklammert
+If it worked, you can now run the check in CRONJOB.DE. **Prüfung jetzt durchführen**
+<br><br>
+![Alt Image Text](./Images/RP_Setup32.png "Setup32")
+<br>
+Afterwards, a message appears if it has worked.
 
+<br><br><br><br>
+
+The setup is now complete and everything should work. It is now advisable to delete the previous data so that the download is then only carried out automatically via the URL. However, this step is optional and does not necessarily have to be carried out. Please make sure that only the code related to deleting the database is active in the script. All other code must be set to inactive. 
+<br><br>
+![Alt Image Text](./Images/RP_Setup33.png "Setup33")
+<br>
+Afterwards, check whether all keys have been deleted from your database.
+
+<br><br><br><br>
+
+**As a last step**: Make sure that only the code needed for the automatic download of the data via cronjob is activated. Also make sure that the **script is running**. If the script is not running, nothing can be triggered via the web. 
+<br><br>
+![Alt Image Text](./Images/RP_Setup34.png "Setup34")
+
+<br><br><br><br><br><br>
+
+## Here a quick summary about the setup
+
+<br><br><br>
+# Web links
+
+<br>
+
+Code: **Https://apistockmarketdata.samuelhaller.repl.co**    (acc. Replit webview)
+  * Checks if the script runs.
+  * *Can be triggered when script is executed in Replit (**Run**) or the link is entered on the web.*
+  * Gives as response "Welcome to my Flask app!"
+
+<br>
+
+Code: **Https://apistockmarketdata.samuelhaller.repl.co/fetchdata**
+  * Is executing script and downloads data.
+  * *Can only be executed if the link is executed via the web.*
+  * Gives as response "Data fetching completed!"
+
+<br>
+
+Code: **Https://apistockmarketdata.samuelhaller.repl.co/cronjob_78641.html**
+  * Is required for the verification in CRONJOB.DE.
+  * Has to be done one-time.
+  * *Can only be executed if the link is executed via the web.*
+  * Gives as response "Cronjob.de"
+
+*Please have in mind, that your URL link looks different since the code is depending on your project and user name (and Verification number from CRONJOB.DE).*
+
+<br><br><br>
+# Python script - different codes
+
+<br>
+
+In our script we have the following codes:
+<br>
+1. Automatic download of data via cronjob
+2. Manual download of the data
+3. Viewing the database
+4. Creation of a csv file
+5. Deleting the database
+
+Make sure of the following:
+ * That the script is **always** running. If the script is not running, nothing can be triggered via the web.
+ * That only the first code is set to active.
 
 
 
