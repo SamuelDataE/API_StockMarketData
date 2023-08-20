@@ -534,7 +534,7 @@ Code: **Https://apistockmarketdata.samuelhaller.repl.co/cronjob_78641.html**
   * *Can only be executed if the link is executed via the web.*
   * Gives as response "Cronjob.de"
 
-*Please have in mind, that your URL link looks different since the code is depending on your project and user name (and Verification number from CRONJOB.DE).*
+*Please have in mind, that your URL link looks different since the code is depending on your project and user name (and verification number from CRONJOB.DE).*
 
 <br><br><br>
 ### Python script - different codes
