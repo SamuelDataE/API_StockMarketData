@@ -7,9 +7,5 @@ Relevant files in this folder:
 
 If in some files the images are displayed too small, please click on the images to zoom in. 
 
-<br><br><br><br>
 
-# ToDo
-
-3. Schauen, ob Zapier kostenlos ist (die ersten Tage einfach kostenlos)
 

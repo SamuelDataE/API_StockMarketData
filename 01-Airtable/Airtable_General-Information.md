@@ -14,8 +14,10 @@ The following figure shows how the process looks for the daily download of data 
 <br><br><br><br>
 
 ## Result
+<br>
 The end result is a database with daily records on the requested shares. 
 <br><br>
+
 ![Alt Image Text](./Images/Airtable_Setup36.png "Setup36")
 
 <br><br><br><br>
