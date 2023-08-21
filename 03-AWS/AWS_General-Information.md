@@ -12,6 +12,7 @@ The following figure shows which applications are used for the daily download of
     * **AWS S3**: Scalable cloud storage service that allows users to store and retrieve data.
     * **AWS Athena**: Serverless interactive query service that enables analysis of data in Amazon S3 using SQL.
 <br>
+
 ![Alt Image Text](./Images/AWS_Dataflow.png "Dataflow")
   
 <br><br><br><br>
