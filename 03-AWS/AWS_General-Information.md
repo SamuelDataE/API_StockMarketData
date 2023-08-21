@@ -1,8 +1,8 @@
 # General information about Amazon Web Service
 <br><br>
-Replit.io, commonly referred to as Replit, is an online platform that offers an integrated development environment (IDE) where users can write, run, and share code in various programming languages directly in the browser. It facilitates collaborative coding, hosting web apps, and provides a range of educational resources for learners. Replit's mission is to make programming more accessible to a wider audience. Since it is an integrated development enivronment, users can access various services via one platform and do not have to worry about hosting or maintaining the different services. 
+AWS, or [Amazon Web Services](https://aws.amazon.com/de/), is a subsidiary of Amazon providing on-demand cloud computing platforms and APIs to individuals, companies, and governments. It offers a broad set of tools and services including computing power, storage, and databases. AWS enables its users to run applications, host websites, and manage big data on a scalable and reliable infrastructure. For our project, we only need services from AWS in addition to the external data provider [Alpha Vantage](../00-Alpha_Vantage).
 
-The following figure shows how the process looks for the daily download of data via API.
+The following figure shows which applications are used for the daily download of data via API in AWS.
 
 1. The data is provided by the market data provider [Alpha Vantage](../00-Alpha_Vantage).
 2. Replit is the IDE which is hosting our python script. With this script the data is pulled out from Alpha Vantage and stored directly in the Replit database.  
