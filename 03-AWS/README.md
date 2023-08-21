@@ -1,5 +1,5 @@
 ## General information
-This folder shows how the stock exchange data can be downloaded with the cloud platform Amazon Web Services (AWS). The procedure is setup with a python code. You don't necessarily need any knowledge of Python to set up this approach - the whole script is already written and made available to you. However, it helps to have a basic knowledge of Python to better understand the script.
+This folder shows how the stock exchange data can be downloaded with the cloud platform Amazon Web Service (AWS). The procedure is setup with a python code. You don't necessarily need any knowledge of Python to set up this approach - the whole script is already written and made available to you. However, it helps to have a basic knowledge of Python to better understand the script.
 
 Relevant files in this folder:
 1. [AWS_General-Information](AWS_General-Information.md)
