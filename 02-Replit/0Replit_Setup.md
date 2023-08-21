@@ -431,7 +431,7 @@ Please note, this is only working when the script in Replit is **running**.
 
 ### CRONJOB.DE
 <br><br>
-To ensure that the script now runs daily, we now call up the URL-link (Https://apistockmarketdata.samuelhaller.repl.co/fetchdata)*(your URL is different)* daily with the help of CRONJOB.DE. To do this, we have to register on CRONJOB.DE. The page is in German. You can also use another cronjob provider if you want to have an English page. There are many providers in this area. 
+To ensure that the script now runs daily, we now call up the URL-link (Https://apistockmarketdata.samuelhaller.repl.co/fetchdata - *your URL is different*) daily with the help of CRONJOB.DE. To do this, we have to register on CRONJOB.DE. The page is in German. You can also use another cronjob provider if you want to have an English page. There are many providers in this area. 
 <br>
 Register yourself on [CRONJOB.DE](https://www.cronjob.de/anmeldung).
 <br><br>
@@ -462,9 +462,9 @@ Click on the button **Neuen CRONJOB anlegen**.
 
 After setting up the cronjob, you will be prompted to run a verification. This is asked to ensure that you are authorised to create this cronjob for the relevant server (Replit). 
 <br>
-In this example, we must now create an html file in Replit with the name **cronjob_788641.html**. This file should contain the content **cronjob.de**. Before you click on the **Prüfung jetzt durchführen** button, you can check manually with the shown link (**Https://apistockmarketdata.samuelhaller.repl.co/cronjob_78641.html**) whether the verification works. We do this at a later step when the file is created.  
+In this example, we must now create an html file in Replit with the name **cronjob_788641.html**. This file should contain the content **cronjob.de**. Before you click on the **Prüfung jetzt durchführen** button, you can check manually with the shown link (**Https://apistockmarketdata.samuelhaller.repl.co/cronjob_78641.html**) whether the verification works. We do this at a later step when the Html file is created.  
 <br><br>
-![Alt Image Text](./Images/RP_Setup32.png "Setup32")
+![Alt Image Text](./Images/RP_Setup281.png "Setup281")
 
 <br><br><br><br>
 
@@ -524,17 +524,17 @@ Code: **Https://apistockmarketdata.samuelhaller.repl.co**    (acc. Replit webvie
 
 Code: **Https://apistockmarketdata.samuelhaller.repl.co/fetchdata**
   * Is executing script and downloads data.
-  * *Can only be executed if the link is executed via the web.*
+  * *Can only be executed via the web.*
   * Gives as response "Data fetching completed!"
 
 <br>
 
 Code: **Https://apistockmarketdata.samuelhaller.repl.co/cronjob_78641.html**
   * Is required for the verification in CRONJOB.DE.
-  * Has to be done one-time.
-  * *Can only be executed if the link is executed via the web.*
+  * Must be performed once.
+  * *Can only be executed via the web.*
   * Gives as response "Cronjob.de"
-
+<br><br>
 *Please have in mind, that your URL link looks different since the code is depending on your project and user name (and verification number from CRONJOB.DE).*
 
 <br><br><br>
@@ -554,7 +554,7 @@ In our script we have the following codes:
 
 Make sure of the following:
  * That the script is **always** running. If the script is not running, nothing can be triggered via the web.
- * That only the first code is set to active.
+ * That only the first code (**Automatic download of data via cronjob**) is set to active.
 
 
 
