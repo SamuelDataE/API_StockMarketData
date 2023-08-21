@@ -47,29 +47,30 @@ Here the detailed costs of AWS Lambda: [Pricing](https://aws.amazon.com/lambda/p
 ### Amazon EventBridge
 <br>![Alt Image Text](./Images/AWS_PricingAmazonEventBridge.png "PricingEventBridge")
 <br>
-Here the detailed costs of AWS Lambda: [Pricing](https://aws.amazon.com/eventbridge/pricing/)
+Here the detailed costs of Amazon EventBridge: [Pricing](https://aws.amazon.com/eventbridge/pricing/)
 
 <br><br>
 
 ### AWS S3
 <br>![Alt Image Text](./Images/AWS_PricingS3.png "PricingS3")
 <br>
-Here the detailed costs of AWS Lambda: [Pricing](https://aws.amazon.com/s3/pricing/)
+Here the detailed costs of AWS S3: [Pricing](https://aws.amazon.com/s3/pricing/)
 
 <br><br>
 
 ### AWS Athena
 <br>![Alt Image Text](./Images/AWS_PricingAthena.png "PricingAthena")
 <br>
-Here the detailed costs of AWS Lambda: [Pricing](https://aws.amazon.com/athena/pricing/)
+Here the detailed costs of AWS Athena: [Pricing](https://aws.amazon.com/athena/pricing/)
 
 <br><br>
 
 ### Personal cost overview
 <br>
 Even with this information above, it is very difficult to get an estimate of how the costs will behave for our project. Therefore, here is an overview of my costs:
-<br>
+<br><br>
 Duration: 1 month
 Number of shares: 10 pieces 
+<br>
 
 ![Alt Image Text](./Images/AWS_Costs.png "PricingCosts")
