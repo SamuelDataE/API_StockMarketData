@@ -403,7 +403,7 @@ If you have bought the "My Cicles" or made the subscription, activate the **Alwa
 
 <br><br><br><br>
 
-Now click on **Run**. A webview will now open on the right-hand side. You will now see a link with your project und user name. Copy this link and write it into your code in the script (line 2 in the image below).  Add ```Https://``` to the front of the code and add ```/Fetchdata``` to the back. **This is the code with which you execute the script.**  
+Now click on **Run**. A webview will now open on the right-hand side. You will now see a link with your project und user name. Copy this link and write it into your code in the script (line 2 in the image below).  Add ```Https://``` to the front of the code and add ```/fetchdata``` to the back. <br> **This is the code with which you execute the script.**  
 <br><br>
 ![Alt Image Text](./Images/RP_Setup24.png "Setup24")
 <br><br><br><br>
@@ -416,8 +416,8 @@ Code: **Https://apistockmarketdata.samuelhaller.repl.co**    (acc. Replit webvie
   * Gives as response "Welcome to my Flask app!"
 <br><br>  
 Code: **Https://apistockmarketdata.samuelhaller.repl.co/fetchdata**
-  * Is executing script and downloads data.
-  * *Can only be executed if the link is executed via the web.*
+  * Is executing the script and downloads the stock data.
+  * *Can only be executed via web.*
   * Gives as response "Data fetching completed!"
 
 <br><br>
@@ -431,7 +431,7 @@ Please note, this is only working when the script in Replit is **running**.
 
 ### CRONJOB.DE
 <br><br>
-To ensure that the script now runs daily, we now call up the **Https://apistockmarketdata.samuelhaller.repl.co/fetchdata**-page *(your URL is different)* daily with the help of CRONJOB.DE. To do this, we have to register on CRONJOB.DE. The page is in German. You can also use another cronjob provider if you want to have an English page. There are many providers in this area. 
+To ensure that the script now runs daily, we now call up the URL-link (Https://apistockmarketdata.samuelhaller.repl.co/fetchdata)*(your URL is different)* daily with the help of CRONJOB.DE. To do this, we have to register on CRONJOB.DE. The page is in German. You can also use another cronjob provider if you want to have an English page. There are many providers in this area. 
 <br>
 Register yourself on [CRONJOB.DE](https://www.cronjob.de/anmeldung).
 <br><br>
