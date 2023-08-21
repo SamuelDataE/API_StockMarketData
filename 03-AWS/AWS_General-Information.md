@@ -11,7 +11,7 @@ The following figure shows which applications are used for the daily download of
     * **Amazon EventBridge**: Serverless event bus service that facilitates the connection of applications using data from various sources. Responsible in this project for running the code in Lambda on a daily basis. 
     * **AWS S3**: Scalable cloud storage service that allows users to store and retrieve data.
     * **AWS Athena**: Serverless interactive query service that enables analysis of data in Amazon S3 using SQL.
-
+<br>
 ![Alt Image Text](./Images/AWS_Dataflow.png "Dataflow")
   
 <br><br><br><br>
@@ -20,6 +20,7 @@ The following figure shows which applications are used for the daily download of
 <br>
 The end result is a database with daily records on the requested shares. 
 <br><br>
+
 ![Alt Image Text](./Images/AWS_Result.png "Result")
 <br><br>
 This data can be downloaded in a csv file.
@@ -63,6 +64,8 @@ Here the detailed costs of AWS Lambda: [Pricing](https://aws.amazon.com/athena/p
 
 <br><br>
 
+### Personal cost overview
+<br>
 Even with this information above, it is very difficult to get an estimate of how the costs will behave for our project. Therefore, here is an overview of my costs:
 <br>
 Duration: 1 month
