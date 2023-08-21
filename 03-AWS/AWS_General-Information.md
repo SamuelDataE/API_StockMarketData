@@ -1,6 +1,6 @@
 # General information about Amazon Web Service
 <br><br>
-AWS, or [Amazon Web Services](https://aws.amazon.com/de/), is a subsidiary of Amazon providing on-demand cloud computing platforms and APIs to individuals, companies, and governments. It offers a broad set of tools and services including computing power, storage, and databases. AWS enables its users to run applications, host websites, and manage big data on a scalable and reliable infrastructure. For our project, we only need services from AWS in addition to the external data provider [Alpha Vantage](../00-Alpha_Vantage).
+AWS, or [Amazon Web Services](https://aws.amazon.com/de/), is a subsidiary of Amazon providing on-demand cloud computing platforms and APIs to individuals, companies, and governments. It offers a broad set of tools and services including computing power, storage, and databases. AWS enables its users to run applications, host websites, and manage big data on a scalable and reliable infrastructure. For our project, we only need services from AWS in addition to the external data provider [Alpha Vantage](https://www.alphavantage.co/#page-top).
 
 The following figure shows which applications are used for the daily download of data via API in AWS.
 
