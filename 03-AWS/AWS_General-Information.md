@@ -36,7 +36,7 @@ Pricing with AWS is more complex than with the other two methods. AWS pricing va
 **Generally, users pay for what they use, with many services operating on a pay-as-you-go model.** 
 <br><br><br>
 Here is a list of the costs of each service:
-
+<br><br>
 ### AWS Lambda
 <br>![Alt Image Text](./Images/AWS_PricingLambda.png "PricingLambda")
 <br>
