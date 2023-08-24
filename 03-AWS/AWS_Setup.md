@@ -273,9 +273,8 @@ def lambda_handler(event, context):
     }
 ```
 <br>
-Enter the code in AWS Lambda. You can overwrite / delete the previous code. 
-<br><br>
-![Alt Image Text](./Images/RP_Setup29.png "Setup29")
+
+If your bucket name in S3 is not **api.alphavantage.data**. Change the code accordingly. The name of your bucket in which you want to save the data must be in the code. 
 
 <br><br><br><br>
 
@@ -285,7 +284,7 @@ Enter the code in AWS Lambda. You can overwrite / delete the previous code.
 
 <br><br><br><br>
 
-Before we run the code, we need to do another configuration in AWS Lambda.
+Before we run the code, we need to do some further configurations in AWS Lambda.
 1. Go to **Configuration**
 2. Click on **Environment variables**
 3. Click on **Edit**
@@ -296,16 +295,55 @@ Before we run the code, we need to do another configuration in AWS Lambda.
 
 In our Python code we refer to these environment variables. Therefore, we now need to define them.
 1. The first variable is your API key. For this, enter ```API_Key``` in the key name. Now enter your API Key from Alpha Vantage in Value. How to request that Key is described [here](../00-Alpha_Vantage/Alpha-Vantage_General-Information.md).
-2. The second variable are your symbols. Enter in 
+2. The second variable are your symbols. Enter in Key ```Symbols```. In the value field you can now enter all the symbols of the shares for which you want to have the data. How to determine the symbols of the respective shares is described under [Alpha-Vantage_Stock Selection](../00-Alpha_Vantage/Alpha-Vantage_Stock-Selection.md).
 <br><br>
-![Alt Image Text](./Images/RP_Setup30.png "Setup30")
+![Alt Image Text](./Images/RP_Setup31.png "Setup31")
 
 <br><br><br><br>
 
+The second setting change we need to make is the timeout. Currently, the Lambda function is set to run for no longer than 3 seconds. We need to increase this time because we can retrieve data from Alpha Vantage from only 5 shares per minute. The Python code is therefore designed to retrieve a stock symbol only every 12 seconds. Therefore, the higher the number of stock symbols you query, the higher you have to set the timeout. To increase the time you have to proceed as follows:
+1. Go to **Configuration**
+2. Click on **General configuraiton**
+3. **Edit**
+<br><br>
+![Alt Image Text](./Images/RP_Setup32.png "Setup32")
 
+<br><br><br><br>
 
+In this example, the timeout has now been increased to 3 minutes. Depending on the number of shares that are queried, a higher time must be selected.
+1. Increase the **timeout** time
+2. **Save**
+<br><br>
+![Alt Image Text](./Images/RP_Setup33.png "Setup33")
 
+<br><br><br><br>
 
+Now we have made all the configurations and can run and test the code. 
+1. Click on **Deploy**. This saves the code.
+2. Click on **Test**.
+<br>
+A new tab opens (*Execution results*). If the message **Data processig complete!** appears and you see the data of the shares you requested, everything has worked!
+<br><br>
+![Alt Image Text](./Images/RP_Setup34.png "Setup34")
+<br>
+Please note that whenever you change your code, you must click **Deploy** to save your changes.
+
+<br><br><br><br>
+
+We now want to check whether the data has also been saved in the S3 bucket.
+1. Go to Amazon S3
+2. Click on Buckets
+3. Select the bucket on which the data was written down according to the code in Lambda
+<br><br>
+![Alt Image Text](./Images/RP_Setup35.png "Setup35")
+
+<br><br><br><br>
+
+The files were loaded correctly into the bucket. It worked.
+<br><br>
+![Alt Image Text](./Images/RP_Setup36.png "Setup36")
+
+<br><br><br><br>
 
 
 
