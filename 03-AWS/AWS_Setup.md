@@ -157,119 +157,22 @@ Once you have added the respective policy, it should appear in your list.
 Now change your window tab and go back to your Lambda function. 
 <br>
 We use Python to download the data. In Python we use the *requests* library (an already prefabricated Python package). In AWS Lambda, not all Python libraries are available by default. Therefore, you need to provide them together with your Lambda code. For this we need to do the following steps:
-1. Open your local *Command Prompt*. To do this, click **Win + R** on your keyboard. Windows open - enter **cmd**.
-2. Use the command **cd** followed by the path to navigate to the directory where you want to create a new directory. For example: **cd C:\Users\YourName\Documents**. In this case it looks like this:
-<br><br>
-![Alt Image Text](./Images/RP_Setup18.png "Setup18")
-
-<br><br><br><br>
-
-When you have executed the script, the data in the database should be deleted after a few seconds. Check this under **Database**.
+1. Open your local *Command Prompt*. To do this, click **Win + R** on your keyboard. Windows open - enter **cmd**. **OK**.
+2. Use the command **cd** followed by the path to navigate to the directory where you want to create a new directory. For example: **cd C:\Users\YourName\Documents**. In the image below, I have entered the path as it would look on my PC. When you have entered this. Press **Enter**.
+3. A new line now appears and you can see that the working directory has now been changed according to my entry under step #2. 
 <br><br>
 ![Alt Image Text](./Images/RP_Setup19.png "Setup19")
-<br><br>
-This way you can delete the contents of the database. You have to delete the csv file manually. Left-click on the file and delete.
+
 
 <br><br><br><br>
 
-Again, set this code to inactive by using the ```'''``` characters.
+Now copy the following code into your *cmd*: ```mkdir my_lambda_package```. Press **Enter**.
 <br><br>
 ![Alt Image Text](./Images/RP_Setup20.png "Setup20")
 
 <br><br><br><br><br>
 
-We now have the codes for the following tasks in our script:
-<br>
- * Manual download of the data
- * Viewing the database
- * Creation of a csv file
- * Deleting the database
-<br>
-What is missing now is the code to run the script automatically on a daily basis. Once again, make sure that all codes are set to inactive and then we'll get started. 
 
-<br><br><br><br><br>
-
-The following code now forms the core of our script. This code can no longer be executed manually, but is triggered via the web. More about this later. Copy the code.
-<br><br>
-```
-# Start via CRONJOB.DE (automatic execution)
-# manual start via Web; https://apistockmarketdata.samuelhaller.repl.co/fetchdata
-
-import requests
-import time
-from replit import db
-from flask import Flask
-from datetime import datetime  # Importing the datetime module
-
-app = Flask(__name__)
-
-def load_symbols_from_file(filename):
-    with open(filename, 'r') as file:
-        return [line.strip() for line in file]
-
-def load_api_key_from_file(filename):
-    with open(filename, 'r') as file:
-        for line in file:
-            key, value = line.strip().split('=')
-            if key == "API_KEY":
-                return value
-    return None
-
-symbols = load_symbols_from_file('symbols.txt')
-apikey = load_api_key_from_file('config.txt')
-
-def fetch_data():
-    for symbol in symbols:
-        url = f'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={symbol}&apikey={apikey}'
-        r = requests.get(url)
-        data = r.json()
-        
-        quote = data.get("Global Quote", {})
-        trading_day = quote.get("07. latest trading day", "")
-        
-        # Combine symbol and trading day into a unique key
-        unique_key = f"{symbol}_{trading_day}"
-        
-        # Add the current timestamp
-        quote['timestamp'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        
-        # Check if the key is already in the database
-        if unique_key not in db:
-            db[unique_key] = quote
-
-        print(data)
-        time.sleep(15)
-
-@app.route('/')
-def home():
-    return "Welcome to my Flask app!"
-
-@app.route('/fetchdata')
-def fetch_data_route():
-    fetch_data()
-    return "Data fetching completed!"
-
-@app.route('/cronjob_78641.html')
-def cron_verification():
-    return "cronjob.de"
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080)
-```
-<br><br>
-This script includes the following items:
-1. Import all functions which are required - including Flask. Due to this package the code is executed via web.
-2. Loads the created supporting files.
-3. Downloads the data from all the symbols stored in symbols.txt.
-4. Safes the data in the database.
-5. Only data is saved which is not in the database yet.
-6. Depending on the web entries, different returns are triggered - more about that later.
-7. A timestamp is added with the time when the data was added to the database.
-8. Since Alpha Vantage has a restriction (only 5 requests per minute) -> there is a time.sleep function which ensures that data is only loaded from one share every 15 seconds. Thus, no more than 4 requests are made per minute. 
-
-<br><br><br><br>
-
-Now copy the code into the script. As this code is the most important, copy the code at the beginning - 1st line.
 <br><br>
 ![Alt Image Text](./Images/RP_Setup21.png "Setup21")
 
