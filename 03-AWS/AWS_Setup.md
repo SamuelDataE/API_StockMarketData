@@ -124,92 +124,41 @@ Now proceed as follows to set up the permission.
     ]
    }
    ```
-   This gives your Lambda function full permission for all S3 related actions in all buckets of your account, which is not optimal for security reasons. It is generally a best practice to follow the principle of least privilege. However, for this test case we use this code as it is simpler. 
+   This gives your Lambda function full permission for all S3 related actions in all buckets of your account, which is not optimal for security reasons. It is generally a best practice to follow the principle of least privilege (only as much as necessary). However, for this test case we use this code as it is simpler. 
 3. **Next** 
 <br><br>
 ![Alt Image Text](./Images/RP_Setup15.png "Setup15")
 
 <br><br><br><br>
 
-The next code is for loading the data from the database into a csv file. This can then simply be downloaded. Copy the following code.
-<br><br>
-```
-# Export database to csv
-
-import csv
-from replit import db
-
-# Filename for the CSV file
-filename = "exported_data.csv"
-
-# Open CSV file for writing
-with open(filename, 'w', newline='') as csvfile:
-    # Create CSV writer object
-    csvwriter = csv.writer(csvfile)
-    
-    # Write CSV header
-    headers = ["Symbol", "Open", "High", "Low", "Price", "Volume", "Latest Trading Day", "Previous Close", "Change", "Change Percent", "Timestamp"]
-    csvwriter.writerow(headers)
-    
-    # Iterate through all keys in the database
-    for key in db.keys():
-        quote = db[key]
-        row = [
-            quote.get("01. symbol", ""),
-            quote.get("02. open", ""),
-            quote.get("03. high", ""),
-            quote.get("04. low", ""),
-            quote.get("05. price", ""),
-            quote.get("06. volume", ""),
-            quote.get("07. latest trading day", ""),
-            quote.get("08. previous close", ""),
-            quote.get("09. change", ""),
-            quote.get("10. change percent", ""),
-            quote.get("timestamp", "")  # Adding the timestamp
-        ]
-        
-        # Write row to CSV
-        csvwriter.writerow(row)
-```
-<br><br><br><br>
-
-Now add this code under the existing code in the script. **Run** the script.
+Now give the policy a name (e.g. ```Full_Access_S3_Lambda```) and write down a description (e.g. ```Full access for Lamdba in S3```). After that **Create policy**.
 <br><br>
 ![Alt Image Text](./Images/RP_Setup16.png "Setup16")
 
 <br><br><br><br>
 
-On the left side under **Files** the file **exported_data.csv** has now been created. If you click on it, you will see the data contained in this csv. You can now download this csv for your further use.
+Go back to the IAM menu and click on the left side on **Roles**. Select your Lambda Function - the role starts with the name of your function. In this case its is *api_alphavantage-role-aju6yhkx*.
 <br><br>
 ![Alt Image Text](./Images/RP_Setup17.png "Setup17")
 
 <br><br><br><br>
 
-Now set this code to inactive as well by using the ```'''``` characters.
+Under *Permissions* you can now click on **Add permissions**. 
+1. Choose **Attach policies**
+2. Select your created policy (e.g. *Full_Access_S3_Lambda*)
+3. **Add permissions**
+<br>
+Once you have added the respective policy, it should appear in your list. 
 <br><br>
-![Alt Image Text](./Images/RP_Setup171.png "Setup171")
+![Alt Image Text](./Images/RP_Setup18.png "Setup18")
 
 <br><br><br><br>
 
-The next code we need is if we want to delete the contents of the database. Again, copy the code below.
-<br><br>
-```
-# Delete data in database
-
-from replit import db
-
-# Iterate through all keys in the database and delete each key
-for key in db.keys():
-    del db[key]
-
-# Delete csv file manually
-```
-
-<br><br><br><br>
-
-1. Click on **Database** under **Tools** at the bottom left.
-2. A tab **Database** opens on the right-hand side next to Console - there you will see that there are **keys** in the database. This is the number of data records contained in the database.
-3. Now copy the code into the script and execute it. **Run**.
+Now change your window tab and go back to your Lambda function. 
+<br>
+We use Python to download the data. In Python we use the *requests* library (an already prefabricated Python package). In AWS Lambda, not all Python libraries are available by default. Therefore, you need to provide them together with your Lambda code. For this we need to do the following steps:
+1. Open your local *Command Prompt*. To do this, click **Win + R** on your keyboard. Windows open - enter **cmd**.
+2. Use the command **cd** followed by the path to navigate to the directory where you want to create a new directory. For example: **cd C:\Users\YourName\Documents**. In this case it looks like this:
 <br><br>
 ![Alt Image Text](./Images/RP_Setup18.png "Setup18")
 
