@@ -19,6 +19,8 @@ We now start with setting up the database. Please enter **S3** in the search fie
 
 <br><br><br><br>
 
+### S3
+<br><br>
 We now open an S3 bucket to store the data loaded by Alpha Vantage. **Create bucket**.
 <br><br>
 ![Alt Image Text](./Images/RP_Setup3.png "Setup3")
@@ -63,6 +65,8 @@ We now start with setting up the script for loading the data form Alpha Vantage.
 
 <br><br><br><br>
 
+### AWS Lambda
+<br><br>
 Create now a new function. **Create function**.
 <br><br>
 ![Alt Image Text](./Images/RP_Setup9.png "Setup9")
@@ -344,6 +348,108 @@ The files were loaded correctly into the bucket. It worked.
 ![Alt Image Text](./Images/RP_Setup36.png "Setup36")
 
 <br><br><br><br>
+### Amazon EventBridge
+<br><br>
+We have now set up the Lambda funciton. The next step is to set up a rule on Amazon EventBridge so that the code is executed daily.
+1. Enter ```Amazon EventBridge``` in the search box.
+2. Select **EventBridge Rule**
+3. **Create rule**
+<br><br>
+![Alt Image Text](./Images/RP_Setup37.png "Setup37")
+
+<br><br><br><br>
+
+Now set up the rule as follows:
+1. Name the rule
+2. Write a description
+3. Select **Schedule**
+4. **Continue in EventBrdige Scheduler**
+<br><br>
+![Alt Image Text](./Images/RP_Setup38.png "Setup38")
+
+<br><br><br><br
+
+We will now define the timetable:
+1. Select **Recurring schedule**
+2. As a schedule type we are using **Cron-based schedule**
+3. We can enter our schedule in the cron expression. In this example, the event is triggered every day at 0530 am. This setting can be entered with ```cron(0 6 * * ? *)```. You can change this to suit your needs.
+4. Select whether the event can be triggered in a flexible time window. Since I do not need the data exactly at 0530am, I have selected *15 minutes* there. 
+<br><br>
+![Alt Image Text](./Images/RP_Setup39.png "Setup39")
+
+<br><br><br><br
+
+The next part is to define the timeframe:
+1. Select the start date (has to be in the future)
+2. Select the end date (has to be after the start date)
+<br><br>
+![Alt Image Text](./Images/RP_Setup40.png "Setup40")
+
+<br><br><br><br>
+
+Now you will be asked to select a target:
+1. **Templated targets**
+2. Select **AWS Lambda**
+3. **Next**
+<br><br>
+![Alt Image Text](./Images/RP_Setup41.png "Setup41")
+
+<br><br><br><br>
+
+Now you will be asked to select a target:
+1. **Templated targets**
+2. Select **AWS Lambda**
+3. **Next**
+<br><br>
+![Alt Image Text](./Images/RP_Setup41.png "Setup41")
+
+Select your Lambda function in the drop down menu. In this example its *api_alphavantage*. **Next**.
+<br><br>
+![Alt Image Text](./Images/RP_Setup42.png "Setup42")
+
+<br><br><br><br>
+
+In the following selection you only have to decide what happens to your EventBridge Scheduler after it has finished (when the end date has been reached). In this example I want to keep it, so I selected *None*. The other items can be left as they are. 
+<br><br>
+![Alt Image Text](./Images/RP_Setup43.png "Setup43")
+
+<br><br><br><br>
+
+In order for the EventBridge Scheduler to access your Lambda function, it needs the appropriate authorisation in *IAM*. AWS creates this permission automatically.
+1. Click **Create new role for this schedule**.
+2. **Next**.
+<br>
+Finish setup and **Create schedule**.
+<br><br>
+![Alt Image Text](./Images/RP_Setup44.png "Setup44")
+
+<br><br><br><br>
+
+In order for the EventBridge Scheduler to access your Lambda function, it needs the appropriate authorisation in *IAM*. AWS creates this permission automatically.
+1. Click **Create new role for this schedule**.
+2. **Next**.
+<br>
+Finish setup and **Create schedule**.
+<br><br>
+![Alt Image Text](./Images/RP_Setup45.png "Setup45")
+
+<br><br><br><br>
+
+The set-up is now complete. In Amazon EventBridge under *Schedules* you can check your rule and change it if necessary. 
+<br><br>
+![Alt Image Text](./Images/RP_Setup46.png "Setup46")
+
+<br><br><br><br>
+### Amazon EventBridge
+<br><br>
+
+
+
+
+
+
+
+
 
 
 
