@@ -435,17 +435,23 @@ Finish setup and **Create schedule**.
 
 <br><br><br><br>
 
-The set-up is now complete. In Amazon EventBridge under *Schedules* you can check your rule and change it if necessary. 
+The set-up is now complete. In Amazon EventBridge under *Schedules* you can check your rule and change it if necessary. The data is now downloaded daily to your S3 bucket.
 <br><br>
 ![Alt Image Text](./Images/RP_Setup46.png "Setup46")
 
 <br><br><br><br>
-### Amazon EventBridge
+
+### AWS Athena
 <br><br>
+In the S3 bucket, a separate file is created for each record (there is one record per day for each share). Therefore, this structure cannot be used for analysis. We therefore need the Athena. This is an interactive query service that allows you to analyse data directly in Amazon S3. 
+<br><br>
+![Alt Image Text](./Images/RP_Setup46.png "Setup46")
 
+<br><br><br><br>
 
-
-
+In the S3 bucket, a separate file is created for each record (there is one record per day for each share). Therefore, this structure cannot be used for analysis. We therefore need the Athena. This is an interactive query service that allows you to analyse data directly in Amazon S3. 
+<br><br>
+![Alt Image Text](./Images/RP_Setup46.png "Setup46")
 
 
 
