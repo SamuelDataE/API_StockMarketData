@@ -162,9 +162,10 @@ Once you have added the respective policy, it should appear in your list.
 <br><br><br><br>
 
 We use Python to download the data. In Python we use the *requests* library (an already prefabricated Python package). In AWS Lambda, not all Python libraries are available by default. Therefore, you need to provide them together with your Lambda code. For this we need to do the following steps:
-1. Open your local *Command Prompt*. To do this, click **Win + R** on your keyboard. Windows open - enter **cmd**. **OK**.
-2. Use the command **cd** followed by the path to navigate to the directory where you want to create a new directory. For example: **cd C:\Users\YourName\Documents**. In the image below, I have entered the path as it would look on my PC. When you have entered this. Press **Enter**.
-3. A new line now appears and you can see that the working directory has now been changed according to my entry under step #2. 
+1. Open your local *Command Prompt*. To do this, click **Win + R** on your keyboard. Windows open - enter ```cmd```. **OK**.
+2. Use the command **cd** followed by the path to navigate to the directory where you want to create a new directory.
+   For example: **cd C:\Users\YourName\Documents**. In the image below, I have entered the path as it would look on my PC. When you have entered this. Press **Enter**.
+4. A new line now appears and you can see that the working directory has now been changed according to my entry under step #2. 
 <br><br>
 ![Alt Image Text](./Images/AWS_Setup19.png "Setup19")
 
@@ -209,7 +210,7 @@ Now open the folder where the file was downloaded - probably in the *Downloads* 
 
 We now need to create a zip file.
 1. Go to your *my_lambda_package* folder.
-2. Mark all folders (*Ctrl + A*)
+2. Mark all folders - including lambda_functions.py (*Ctrl + A*)
 3. Left click and select **Compress to ZIP file**.
 4. Give the zip file the name **my_Lambda_package.zip**.  
 <br><br>
@@ -222,7 +223,7 @@ Now go back to the Lambda function in AWS.
 1. Go to **Upload from**
 2. Select **.zip file**
 3. Click on **Upload**
-4. Select your zip file (*my_lambda_package.zip)
+4. Select your zip file (*my_lambda_package.zip*)
 5. **Save**
 <br><br>
 ![Alt Image Text](./Images/AWS_Setup27.png "Setup27")
@@ -281,7 +282,7 @@ def lambda_handler(event, context):
 ```
 <br>
 
-If your bucket name in S3 is not **api.alphavantage.data**. Change the code accordingly. The name of your bucket in which you want to save the data must be in the code. 
+If your bucket name in S3 is not **api.alphavantage.data**. Change the code accordingly (line #10). The name of your bucket in which you want to save the data must be in the code. 
 
 <br><br><br><br>
 
@@ -301,8 +302,8 @@ Before we run the code, we need to do some further configurations in AWS Lambda.
 <br><br><br><br>
 
 In our Python code we refer to these environment variables. Therefore, we now need to define them.
-1. The first variable is your API key. For this, enter ```API_Key``` in the key name. Now enter your API Key from Alpha Vantage in Value. How to request that Key is described [here](../00-Alpha_Vantage/Alpha-Vantage_General-Information.md).
-2. The second variable are your symbols. Enter in Key ```Symbols```. In the value field you can now enter all the symbols of the shares for which you want to have the data. How to determine the symbols of the respective shares is described under [Alpha-Vantage_Stock Selection](../00-Alpha_Vantage/Alpha-Vantage_Stock-Selection.md).
+1. The first variable is your API key. For this, enter ```API_Key``` in the **key** name. Now enter your API key from Alpha Vantage in **Value**. How to request that key is described [here](../00-Alpha_Vantage/Alpha-Vantage_General-Information.md).
+2. The second variable are your symbols. Enter in **Key** ```Symbols```. In the **Value** field you can now enter all the symbols of the shares for which you want to have the data. How to determine the symbols of the respective shares is described under [Alpha-Vantage_Stock Selection](../00-Alpha_Vantage/Alpha-Vantage_Stock-Selection.md). Separate the symbols with my comma.
 <br><br>
 ![Alt Image Text](./Images/AWS_Setup31.png "Setup31")
 
@@ -317,7 +318,7 @@ The second setting change we need to make is the timeout. Currently, the Lambda 
 
 <br><br><br><br>
 
-In this example, the timeout has now been increased to 3 minutes. Depending on the number of shares that are queried, a higher time must be selected.
+In this example, the timeout has now been increased to 3 minutes. Depending on the number of shares that are queried, a higher timeout must be selected.
 1. Increase the **timeout** time
 2. **Save**
 <br><br>
@@ -329,8 +330,10 @@ Now we have made all the configurations and can run and test the code.
 1. Click on **Deploy**. This saves the code.
 2. Click on **Test**.
 <br>
+
 A new tab opens (*Execution results*). If the message **Data processig complete!** appears and you see the data of the shares you requested, everything has worked!
 <br><br>
+
 ![Alt Image Text](./Images/AWS_Setup34.png "Setup34")
 <br>
 Please note that whenever you change your code, you must click **Deploy** to save your changes.
