@@ -444,6 +444,7 @@ In order for the EventBridge Scheduler to access your Lambda function, it needs 
 <br>
 Finish setup and **Create schedule**.
 <br><br>
+
 ![Alt Image Text](./Images/AWS_Setup45.png "Setup45")
 
 <br><br><br><br>
