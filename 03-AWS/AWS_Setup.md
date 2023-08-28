@@ -21,7 +21,7 @@ We now start with setting up the database. Please enter ```S3``` in the search f
 
 <br><br><br><br>
 
-### S3
+### S3 Database
 <br><br>
 We now open an S3 bucket to store the data loaded by Alpha Vantage. **Create bucket**.
 <br><br>
@@ -29,7 +29,7 @@ We now open an S3 bucket to store the data loaded by Alpha Vantage. **Create buc
 
 <br><br><br><br>
 
-Give your bucket a name - in this example I call the bucket ```api.alphavantage.data```. Please consider the rules für bucket naming (min. 3 characters, only lowercase letters, must begin or end with letter or number). 
+Give your bucket a name - in this example the bucket is calles ```api.alphavantage.data```. Please consider the rules für bucket naming (min. 3 characters, only lowercase letters, must begin or end with letter or number). 
 <br>
 Select the AWS Region. This allows you to select the location where your data is to be stored. Select your nearest location - the nearest location from Switzerland is Frankfurt.
 <br><br>
@@ -51,7 +51,7 @@ For the further selection, leave the standard selection as well. **Create bucket
 
 <br><br><br><br>
 
-After the bucket has been successfully created, we now create a second one. The second bucket is needed so that Athena (database) can write down the data on a folder. 
+After the bucket has been successfully created, we now create a second one. The second bucket is needed so that Athena can store the data that was queried.  
 <br>
 Open another bucket - **Create bucket**. This time give the name ```api.athena.data```. Otherwise, make the same selections as for the previous bucket.
 <br><br>
@@ -109,7 +109,7 @@ Before we continue with setting up our Lambda function, we need to make sure tha
 1. Dublicate window tab
 2. Enter **IAM** in the search field
 3. Go now to **Policies**
-4. Create a new policy. **Create policy**
+4. Create a new policy - **Create policy**
 <br><br>
 ![Alt Image Text](./Images/AWS_Setup14.png "Setup14")
 
@@ -156,6 +156,7 @@ Under *Permissions* you can now click on **Add permissions**.
 <br>
 Once you have added the respective policy, it should appear in your list. 
 <br><br>
+
 ![Alt Image Text](./Images/AWS_Setup18.png "Setup18")
 
 <br><br><br><br>
