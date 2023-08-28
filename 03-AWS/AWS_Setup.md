@@ -618,7 +618,7 @@ Do the following to save this code;
 
 Now we can enter a new query to pull out the data;
 
-1. Click on the **+**sign to open a new query
+1. Click on the + sign to open a new query
 2. Enter the following code to pull out all the data:
    ```SELECT * FROM stock_data;```
 3. At the bottom you now see the result
@@ -626,6 +626,7 @@ Now we can enter a new query to pull out the data;
 <br><br>
 ![Alt Image Text](./Images/AWS_Setup61.png "Setup61")
 <br>
+
 Safe this query and name it ```Download data```.
 
 <br><br><br><br>
