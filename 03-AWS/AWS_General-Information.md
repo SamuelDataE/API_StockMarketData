@@ -11,6 +11,7 @@ The following figure shows which applications are used for the daily download of
     * **Amazon EventBridge**: Serverless event bus service that facilitates the connection of applications using data from various sources. Responsible in this project for running the code in Lambda on a daily basis. 
     * **AWS S3**: Scalable cloud storage service that allows users to store and retrieve data.
     * **AWS Athena**: Serverless interactive query service that enables analysis of data in Amazon S3 using SQL.
+<br>
 
 ![Alt Image Text](./Images/AWS_Dataflow.png "Dataflow")
   
@@ -20,6 +21,7 @@ The following figure shows which applications are used for the daily download of
 <br>
 The end result is a database with daily records on the requested shares. 
 <br><br>
+
 ![Alt Image Text](./Images/AWS_Result.png "Result")
 <br><br>
 This data can be downloaded in a csv file.
@@ -34,7 +36,7 @@ Pricing with AWS is more complex than with the other two methods. AWS pricing va
 **Generally, users pay for what they use, with many services operating on a pay-as-you-go model.** 
 <br><br><br>
 Here is a list of the costs of each service:
-
+<br><br>
 ### AWS Lambda
 <br>![Alt Image Text](./Images/AWS_PricingLambda.png "PricingLambda")
 <br>
@@ -45,27 +47,30 @@ Here the detailed costs of AWS Lambda: [Pricing](https://aws.amazon.com/lambda/p
 ### Amazon EventBridge
 <br>![Alt Image Text](./Images/AWS_PricingAmazonEventBridge.png "PricingEventBridge")
 <br>
-Here the detailed costs of AWS Lambda: [Pricing](https://aws.amazon.com/eventbridge/pricing/)
+Here the detailed costs of Amazon EventBridge: [Pricing](https://aws.amazon.com/eventbridge/pricing/)
 
 <br><br>
 
 ### AWS S3
 <br>![Alt Image Text](./Images/AWS_PricingS3.png "PricingS3")
 <br>
-Here the detailed costs of AWS Lambda: [Pricing](https://aws.amazon.com/s3/pricing/)
+Here the detailed costs of AWS S3: [Pricing](https://aws.amazon.com/s3/pricing/)
 
 <br><br>
 
 ### AWS Athena
 <br>![Alt Image Text](./Images/AWS_PricingAthena.png "PricingAthena")
 <br>
-Here the detailed costs of AWS Lambda: [Pricing](https://aws.amazon.com/athena/pricing/)
+Here the detailed costs of AWS Athena: [Pricing](https://aws.amazon.com/athena/pricing/)
 
 <br><br>
 
-Even with this information above, it is very difficult to get an estimate of how the costs will behave for our project. Therefore, here is an overview of my costs:
+### Personal cost overview
 <br>
+Even with this information above, it is very difficult to get an estimate of how the costs will behave for our project. Therefore, here is an overview of my costs:
+<br><br>
 Duration: 1 month
 Number of shares: 10 pieces 
+<br>
 
 ![Alt Image Text](./Images/AWS_Costs.png "PricingCosts")
