@@ -448,8 +448,8 @@ The set-up is now complete. In Amazon EventBridge under *Schedules* you can chec
 
 ### AWS Athena
 <br><br>
-In the S3 bucket, a separate file is created for each record (there is one record per day for each share). Therefore, this structure cannot be used for analysis. We therefore need the Athena. This is an interactive query service that allows you to analyse data directly in Amazon S3. 
-<br>
+In the S3 bucket, a separate file is created for each record (there is one record per day for each share). Therefore, this structure cannot be used for analysis. We therefore need the *Athena* application. This is an interactive query service that allows you to analyse data directly in Amazon S3. 
+<br><br>
 The data is stored in the S3 bucket as follows:
 <br><br>
 ![Alt Image Text](./Images/AWS_Setup47.png "Setup47")
@@ -467,7 +467,7 @@ Before we do the setup in Athena, we need to give the application the appropriat
 <br><br><br><br>
 
 Secify permissions:
-1. Go to **Json**
+1. Go to **JSON**
 2. Delete default code
 3. Enter the following code in the *policy editor*:
 ```
@@ -503,9 +503,9 @@ Review and create:
 
 <br><br><br><br>
 
-Go now back to your IAM console.
-2. Open **Roles**.
-3. **Create role**. 
+Go now back to your *IAM* console.
+1. Open **Roles**.
+2. **Create role**. 
 <br><br>
 ![Alt Image Text](./Images/AWS_Setup481.png "Setup481")
 
