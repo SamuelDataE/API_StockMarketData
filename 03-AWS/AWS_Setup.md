@@ -565,7 +565,7 @@ You are now in the *Query editor*. Before we retrieve the data, we have to make 
 <br><br><br><br>
 
 You are now in the *Query editor*. Before we retrieve the data, we have to make sure that the data is stored in the right place.
-1. go to the **Settings**
+1. Go to the **Settings**
 2. Press **Manage**
 <br><br>
 ![Alt Image Text](./Images/AWS_Setup57.png "Setup57")
@@ -616,6 +616,7 @@ If your bucket has a different name than ```api.alphavantage.data```, you need t
 <br>
 Press **Run** when you have entered the code. If everything has worked, it shows at the bottom under *Query results* that the code has been **Completed**. In addition, you will now see on the left side that a new table has been created.
 <br><br>
+
 ![Alt Image Text](./Images/AWS_Setup59.png "Setup59")
 
 <br><br><br><br>
