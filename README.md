@@ -4,9 +4,6 @@ This repository demonstrates how to download stock market data via an API. The s
 
 This endeavor has been achieved using three different methods:
 
-***Verlinkung --> Ordner***
-
-
 1. [**Airtable**: Web-based platform using pre-built services (no coding required)](01-Airtable)
 2. [**Replit**: Integrated development environment (involving coding)](02-Replit)
 3. [**AWS**: Cloud computing platform (involving coding)](03-AWS)
