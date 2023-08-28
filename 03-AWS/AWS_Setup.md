@@ -15,6 +15,7 @@ After you have registered, you will be taken to the AWS Home console. This gives
 <br>
 We now start with setting up the database. Please enter **S3** in the search field above. 
 <br><br>
+
 ![Alt Image Text](./Images/AWS_Setup1.png "Setup1")
 
 <br><br><br><br>
@@ -23,7 +24,7 @@ We now start with setting up the database. Please enter **S3** in the search fie
 <br><br>
 We now open an S3 bucket to store the data loaded by Alpha Vantage. **Create bucket**.
 <br><br>
-![Alt Image Text](./Images/AWS_Setup1.png "Setup1")
+![Alt Image Text](./Images/AWS_Setup3.png "Setup3")
 
 <br><br><br><br>
 
