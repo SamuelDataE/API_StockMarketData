@@ -13,6 +13,7 @@ After you have registered, you will be taken to the AWS Home console. This gives
  * **Recently visited**: All tools we require for this project are marked.
  * **Cost and usage**: Gives you an overview of the running costs of your applications.
 <br>
+
 We now start with setting up the database. Please enter ```S3``` in the search field above. 
 <br><br>
 
