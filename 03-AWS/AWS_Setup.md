@@ -454,34 +454,18 @@ The data is stored in the S3 bucket as follows:
 Before we do the setup in Athena, we need to give the application the appropriate permissions in *IAM* for the S3 buckets.
 <br>
 1. Go to your IAM console.
-2. Open **Roles**.
-3. **Create role**. 
+2. Open **Policies**.
+3. **Create policy**. 
 <br><br>
-![Alt Image Text](./Images/RP_Setup48.png "Setup48")
+![Alt Image Text](./Images/RP_Setup481.png "Setup481")
 
-<br><br><br><br
-
-Select trusted entity:
-1. Choose **AWS Service**
-2. Select the appliation **Glue**
-3. Tick the newly appeared box **Glue**
-4. **Next**
-<br><br>
-![Alt Image Text](./Images/RP_Setup49.png "Setup49")
-
-<br><br><br><br
-
-Add permission - **Create policy**
-<br><br>
-![Alt Image Text](./Images/RP_Setup50.png "Setup50")
-
-<br><br><br><br
+<br><br><br><br>
 
 Secify permissions:
 1. Go to **Json**
 2. Delete default code
-3. Enter the following code in the polcy editor:
-   ```
+3. Enter the following code in the *policy editor*:
+```
 {
  "Version": "2012-10-17",
  "Statement": [
@@ -497,16 +481,172 @@ Secify permissions:
        "arn:aws:s3:::*/*"
      ]
    }
-  ]
- }
+ ]
+}
 ```
+4. **Next**
 <br><br>
-![Alt Image Text](./Images/RP_Setup50.png "Setup50")
+![Alt Image Text](./Images/RP_Setup51.png "Setup51")
 
+<br><br><br><br>
 
+Review and create:
+1. Name the policy ```Full_Access_S3_Athena```
+2. At the bottom of the page - **Create policy**
+<br><br>
+![Alt Image Text](./Images/RP_Setup52.png "Setup52")
 
+<br><br><br><br>
 
+Go now back to your IAM console.
+2. Open **Roles**.
+3. **Create role**. 
+<br><br>
+![Alt Image Text](./Images/RP_Setup481.png "Setup481")
 
+<br><br><br><br>
 
+Select trusted entity:
+1. Choose **AWS Service**
+2. Select the appliation **Glue**
+3. Tick the newly appeared box **Glue**
+4. **Next**
+<br><br>
+![Alt Image Text](./Images/RP_Setup49.png "Setup49")
 
+<br><br><br><br>
+
+Add permission - select your newly created policy **Full_Access_S3_Athena**. At the bottom of the page - click **Next**. 
+<br><br>
+![Alt Image Text](./Images/RP_Setup53.png "Setup53")
+
+<br><br><br><br>
+
+Name the role ```S3_Access_rights_Athena```. At the bottom of the page - click **Create role**. 
+<br><br>
+![Alt Image Text](./Images/RP_Setup54.png "Setup54")
+
+<br><br><br><br>
+
+In *IAM* under *Roles* you see now the newly created role for Athena. 
+<br><br>
+![Alt Image Text](./Images/RP_Setup55.png "Setup55")
+
+<br><br><br><br>
+
+Now that we have given permission, we can switch to the Athena application.
+<br>
+1. Enter ```Athena``` in the search field
+2. **Lauchn query editor**
+<br><br>
+![Alt Image Text](./Images/RP_Setup56.png "Setup56")
+
+<br><br><br><br>
+
+You are now in the *Query editor*. Before we retrieve the data, we have to make sure that the data is stored in the right place.
+1. go to the **Settings**
+2. Press **Manage**
+<br><br>
+![Alt Image Text](./Images/RP_Setup57.png "Setup57")
+
+<br><br><br><br>
+
+You are now in the *Query editor*. Before we retrieve the data, we have to make sure that the data is stored in the right place.
+1. go to the **Settings**
+2. Press **Manage**
+<br><br>
+![Alt Image Text](./Images/RP_Setup57.png "Setup57")
+
+<br><br><br><br>
+
+Manage settings:
+1. Press on **Browse S3**.
+2. Select now the bucket in S3 where you want to store the result from Athena. We have opened a bucket in a earlier stage for this case. In this example the bucket is called *api.athena.data*
+3. **Save** settings.
+<br><br>
+![Alt Image Text](./Images/RP_Setup58.png "Setup58")
+
+<br><br><br><br>
+
+Go now in the *Query editor* to **Editor** and enter the following SQL code:
+```
+CREATE EXTERNAL TABLE IF NOT EXISTS stock_data (
+    `01_symbol` string,
+    `02_open` float,
+    `03_high` float,
+    `04_low` float,
+    `05_price` float,
+    `06_volume` bigint,
+    `07_latest_trading_day` string,
+    `08_previous_close` float,
+    `09_change` float,
+    `10_change_percent` string,
+    `timestamp` string
+)
+ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
+WITH SERDEPROPERTIES ( 
+  'mapping.01_symbol'='01. symbol',
+  'mapping.02_open'='02. open',
+  'mapping.03_high'='03. high',
+  'mapping.04_low'='04. low',
+  'mapping.05_price'='05. price',
+  'mapping.06_volume'='06. volume',
+  'mapping.07_latest_trading_day'='07. latest trading day',
+  'mapping.08_previous_close'='08. previous close',
+  'mapping.09_change'='09. change',
+  'mapping.10_change_percent'='10. change percent'
+)
+LOCATION 's3://api.alphavantage.data/';
+```
+<br>
+If your bucket has a different name than ```api.alphavantage.data```, you need to adjust the last line of code accordingly.
+<br>
+Press **Run** when you have entered the code. If everything has worked, it shows at the bottom under *Query results* that the code has been **Completed**. In addition, you will now see on the left side that a new table has been created.
+<br><br>
+![Alt Image Text](./Images/RP_Setup59.png "Setup59")
+
+<br><br><br><br>
+
+Do the following to save this code;
+1. Press on the three dots next to your query name.
+2. Name your query ```Create table```.
+3. **Save query**
+<br><br>
+![Alt Image Text](./Images/RP_Setup60.png "Setup60")
+
+<br><br><br><br>
+
+Now we can enter a new query to pull out the data;
+1. Click on the **+**sign to open a new query
+2. Enter the following code to pull out all the data:
+   ```SELECT * FROM stock_data;```
+3. At the bottom you now see the result
+4. You can now copy the data in your csv file, excel etc.
+<br><br>
+![Alt Image Text](./Images/RP_Setup61.png "Setup61")
+<br>
+Safe this query and name it ```Download data```.
+
+<br><br><br><br>
+
+If you have new data in your S3 bucket, which you have from Alpha Vantage, you need to reload the table. If you want to delete the table completely first, you can proceed as follows:
+1. Click again on the **+**sign to open a third query
+2. Enter the following code to pull out all the data:
+   ```SELECT * FROM stock_data;```
+3. **Run** the code.
+4. You will now see on the left side that there is no longer a table.
+<br><br>
+![Alt Image Text](./Images/RP_Setup62.png "Setup62")
+<br>
+Safe this query and name it ```Delete table```.
+
+<br><br><br><br>
+
+The way we have set up Athena now, the data can be downloaded in a simple way. Depending on when the files are to be processed further in AWS, a different setup is needed in Athena. Possibly also a different database than *Athena*.
+
+<br><br><br><br>
+
+### AWS is now fully set up for our project.
+<br><br>
+Possible sources of error if something doesn't work often have to do with the permissions in *IAM*. If something doesn't work, take a look at these steps again. 
 
