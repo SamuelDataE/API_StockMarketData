@@ -401,7 +401,6 @@ Now you will be asked to select a target:
 2. Select **AWS Lambda**
 3. **Next**
 <br><br>
-
 ![Alt Image Text](./Images/RP_Setup41.png "Setup41")
 
 <br><br><br><br>
@@ -442,6 +441,7 @@ In order for the EventBridge Scheduler to access your Lambda function, it needs 
 1. Click **Create new role for this schedule**.
 2. **Next**.
 <br>
+
 Finish setup and **Create schedule**.
 <br><br>
 
