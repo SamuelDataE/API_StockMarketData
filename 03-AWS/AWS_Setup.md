@@ -366,8 +366,8 @@ We have now set up the Lambda funciton. The next step is to set up a rule on Ama
 <br><br><br><br>
 
 Now set up the rule as follows:
-1. Name the rule
-2. Write a description
+1. Name the rule ```API.daily.executer```
+2. Write a description ```Shall have the lambda code executed daily.```
 3. Select **Schedule**
 4. **Continue in EventBrdige Scheduler**
 <br><br>
