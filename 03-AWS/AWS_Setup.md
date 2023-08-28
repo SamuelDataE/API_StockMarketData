@@ -504,10 +504,10 @@ Review and create:
 <br><br><br><br>
 
 Go now back to your *IAM* console.
-1. Open **Roles**.
-2. **Create role**. 
+1. Open **Roles**
+2. **Create role**
 <br><br>
-![Alt Image Text](./Images/AWS_Setup481.png "Setup481")
+![Alt Image Text](./Images/AWS_Setup48.png "Setup48")
 
 <br><br><br><br>
 
@@ -549,14 +549,6 @@ Now that we have given permission, we can switch to the Athena application.
 <br><br><br><br>
 
 You are now in the *Query editor*. Before we retrieve the data, we have to make sure that the data is stored in the right place.
-1. go to the **Settings**
-2. Press **Manage**
-<br><br>
-![Alt Image Text](./Images/AWS_Setup57.png "Setup57")
-
-<br><br><br><br>
-
-You are now in the *Query editor*. Before we retrieve the data, we have to make sure that the data is stored in the right place.
 1. Go to the **Settings**
 2. Press **Manage**
 <br><br>
@@ -565,8 +557,8 @@ You are now in the *Query editor*. Before we retrieve the data, we have to make 
 <br><br><br><br>
 
 Manage settings:
-1. Press on **Browse S3**.
-2. Select now the bucket in S3 where you want to store the result from Athena. We have opened a bucket in a earlier stage for this case. In this example the bucket is called *api.athena.data*
+1. Click on **Browse S3**.
+2. Select now the bucket in S3 where you want to store the result from Athena. We have opened a bucket in a earlier stage for this case. In this example the bucket is called *api.athena.data*.
 3. **Save** settings.
 <br><br>
 ![Alt Image Text](./Images/AWS_Setup58.png "Setup58")
@@ -604,8 +596,10 @@ WITH SERDEPROPERTIES (
 LOCATION 's3://api.alphavantage.data/';
 ```
 <br>
+
 If your bucket has a different name than ```api.alphavantage.data```, you need to adjust the last line of code accordingly.
-<br>
+<br><br>
+
 Press **Run** when you have entered the code. If everything has worked, it shows at the bottom under *Query results* that the code has been **Completed**. In addition, you will now see on the left side that a new table has been created.
 <br><br>
 
