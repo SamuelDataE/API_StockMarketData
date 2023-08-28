@@ -444,14 +444,64 @@ The set-up is now complete. In Amazon EventBridge under *Schedules* you can chec
 ### AWS Athena
 <br><br>
 In the S3 bucket, a separate file is created for each record (there is one record per day for each share). Therefore, this structure cannot be used for analysis. We therefore need the Athena. This is an interactive query service that allows you to analyse data directly in Amazon S3. 
+<br>
+The data is stored in the S3 bucket as follows:
 <br><br>
-![Alt Image Text](./Images/RP_Setup46.png "Setup46")
+![Alt Image Text](./Images/RP_Setup47.png "Setup47")
 
 <br><br><br><br>
 
-In the S3 bucket, a separate file is created for each record (there is one record per day for each share). Therefore, this structure cannot be used for analysis. We therefore need the Athena. This is an interactive query service that allows you to analyse data directly in Amazon S3. 
+Before we do the setup in Athena, we need to give the application the appropriate permissions in *IAM* for the S3 buckets.
+<br>
+1. Go to your IAM console.
+2. Open **Roles**.
+3. **Create role**. 
 <br><br>
-![Alt Image Text](./Images/RP_Setup46.png "Setup46")
+![Alt Image Text](./Images/RP_Setup48.png "Setup48")
+
+<br><br><br><br
+
+Select trusted entity:
+1. Choose **AWS Service**
+2. Select the appliation **Glue**
+3. Tick the newly appeared box **Glue**
+4. **Next**
+<br><br>
+![Alt Image Text](./Images/RP_Setup49.png "Setup49")
+
+<br><br><br><br
+
+Add permission - **Create policy**
+<br><br>
+![Alt Image Text](./Images/RP_Setup50.png "Setup50")
+
+<br><br><br><br
+
+Secify permissions:
+1. Go to **Json**
+2. Delete default code
+3. Enter the following code in the polcy editor:
+   ```
+{
+ "Version": "2012-10-17",
+ "Statement": [
+   {
+     "Effect": "Allow",
+     "Action": [
+       "s3:GetObject",
+       "s3:PutObject",
+       "s3:ListBucket"
+     ],
+     "Resource": [
+       "arn:aws:s3:::*",
+       "arn:aws:s3:::*/*"
+     ]
+   }
+  ]
+ }
+```
+<br><br>
+![Alt Image Text](./Images/RP_Setup50.png "Setup50")
 
 
 
