@@ -632,7 +632,7 @@ Safe this query and name it ```Download data```.
 <br><br><br><br>
 
 If you have new data in your S3 bucket, which you have from Alpha Vantage, you need to reload the table. If you want to delete the table completely first, you can proceed as follows:
-1. Click again on the **+**sign to open a third query
+1. Click again on the + sign to open a third query
 2. Enter the following code to pull out all the data:
    ```SELECT * FROM stock_data;```
 3. **Run** the code.
@@ -640,6 +640,7 @@ If you have new data in your S3 bucket, which you have from Alpha Vantage, you n
 <br><br>
 ![Alt Image Text](./Images/AWS_Setup62.png "Setup62")
 <br>
+
 Safe this query and name it ```Delete table```.
 
 <br><br><br><br>
@@ -648,7 +649,5 @@ The way we have set up Athena now, the data can be downloaded in a simple way. D
 
 <br><br><br><br>
 
-### AWS is now fully set up for our project.
-<br><br>
-Possible sources of error if something doesn't work often have to do with the permissions in *IAM*. If something doesn't work, take a look at these steps again. 
+### AWS is now fully set up
 
