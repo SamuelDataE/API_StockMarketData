@@ -373,22 +373,25 @@ Now set up the rule as follows:
 <br><br>
 ![Alt Image Text](./Images/AWS_Setup38.png "Setup38")
 
-<br><br><br><br
+<br><br><br><br>
 
 We will now define the timetable:
 1. Select **Recurring schedule**
 2. As a schedule type we are using **Cron-based schedule**
-3. We can enter our schedule in the cron expression. In this example, the event is triggered every day at 0530 am. This setting can be entered with ```cron(0 6 * * ? *)```. You can change this to suit your needs.
+3. We can enter our schedule in the cron expression. In this example, the event is triggered every day at 0530 am. This setting can be entered with ```cron(30 5 * * ? *)```. You can change this to suit your needs.
 4. Select whether the event can be triggered in a flexible time window. Since I do not need the data exactly at 0530am, I have selected *15 minutes* there. 
 <br><br>
 ![Alt Image Text](./Images/AWS_Setup39.png "Setup39")
 
-<br><br><br><br
+<br><br><br><br>
 
 The next part is to define the timeframe:
 1. Select the start date (has to be in the future)
 2. Select the end date (has to be after the start date)
+<br>
+Both dates are optional.
 <br><br>
+
 ![Alt Image Text](./Images/AWS_Setup40.png "Setup40")
 
 <br><br><br><br>
@@ -398,6 +401,7 @@ Now you will be asked to select a target:
 2. Select **AWS Lambda**
 3. **Next**
 <br><br>
+
 ![Alt Image Text](./Images/RP_Setup41.png "Setup41")
 
 <br><br><br><br>
@@ -409,13 +413,15 @@ Now you will be asked to select a target:
 <br><br>
 ![Alt Image Text](./Images/AWS_Setup41.png "Setup41")
 
+<br><br><br><br>
+
 Select your Lambda function in the drop down menu. In this example its *api_alphavantage*. **Next**.
 <br><br>
 ![Alt Image Text](./Images/AWS_Setup42.png "Setup42")
 
 <br><br><br><br>
 
-In the following selection you only have to decide what happens to your EventBridge Scheduler after it has finished (when the end date has been reached). In this example I want to keep it, so I selected *None*. The other items can be left as they are. 
+In the following selection you only have to decide what happens to your *EventBridge Scheduler* after it has finished (when the end date has been reached). In this example I want to keep it, so I selected *None*. The other items can be left as they are. 
 <br><br>
 ![Alt Image Text](./Images/AWS_Setup43.png "Setup43")
 
@@ -427,6 +433,7 @@ In order for the EventBridge Scheduler to access your Lambda function, it needs 
 <br>
 Finish setup and **Create schedule**.
 <br><br>
+
 ![Alt Image Text](./Images/AWS_Setup44.png "Setup44")
 
 <br><br><br><br>
