@@ -401,6 +401,7 @@ Now you will be asked to select a target:
 2. Select **AWS Lambda**
 3. **Next**
 <br><br>
+
 ![Alt Image Text](./Images/RP_Setup41.png "Setup41")
 
 <br><br><br><br>
