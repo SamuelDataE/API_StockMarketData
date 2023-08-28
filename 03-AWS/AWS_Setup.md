@@ -608,8 +608,8 @@ Press **Run** when you have entered the code. If everything has worked, it shows
 <br><br><br><br>
 
 Do the following to save this code;
-1. Press on the three dots next to your query name.
-2. Name your query ```Create table```.
+1. Press on the three dots next to your query name
+2. Name your query ```Create table```
 3. **Save query**
 <br><br>
 ![Alt Image Text](./Images/AWS_Setup60.png "Setup60")
@@ -617,6 +617,7 @@ Do the following to save this code;
 <br><br><br><br>
 
 Now we can enter a new query to pull out the data;
+
 1. Click on the **+**sign to open a new query
 2. Enter the following code to pull out all the data:
    ```SELECT * FROM stock_data;```
