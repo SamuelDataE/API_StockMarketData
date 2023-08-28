@@ -15,7 +15,7 @@ After you have registered, you will be taken to the AWS Home console. This gives
 <br>
 We now start with setting up the database. Please enter **S3** in the search field above. 
 <br><br>
-![Alt Image Text](./Images/AWS_Setup2.png "Setup2")
+![Alt Image Text](./Images/AWS_Setup1.png "Setup1")
 
 <br><br><br><br>
 
