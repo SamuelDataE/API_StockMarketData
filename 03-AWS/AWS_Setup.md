@@ -3,7 +3,7 @@
 
 ### Amazon Web Service AWS
 <br><br>
-Open an account with AWS - you can do this under the following [link](https://aws.amazon.com/). Enter your details - the login process should be self-explanatory. Since AWS is chargeable, you will also be asked for your payment method. The easiest way is to store your credit card.
+Open an account with AWS - you can do this under the following [link](https://aws.amazon.com/). Enter your details - the login process should be self-explanatory. Since AWS is chargeable, you will also be asked for a payment method. The easiest way is to store your credit card.
 <br><br>
 ![Alt Image Text](./Images/AWS_Setup1.png "Setup1")
 
