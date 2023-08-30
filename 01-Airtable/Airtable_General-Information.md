@@ -11,9 +11,9 @@ The following figure shows how the process looks for the daily download of data 
 
 ![Alt Image Text](./Images/Airtable_dataflow1.png "Dataflow")
 <br><br>
-**DataFetcher**: Data Fetcher is an application that allows data to be imported directly from various sources into Airtable. It automates the data retrieval process by using APIs to efficiently extract the desired data and store it in tables.
+**[DataFetcher](https://datafetcher.com/about)**: Data Fetcher is an application that allows data to be imported directly from various sources into Airtable. It automates the data retrieval process by using APIs to efficiently extract the desired data and store it in tables.
 <br><br>
-**Zapier**: Zapier is an online automation tool that connects various apps and creates automated workflows, called "Zaps". It allows users, without coding knowledge, to automate actions between different web services.
+**[Zapier](https://zapier.com)**: Zapier is an online automation tool that connects various apps and creates automated workflows, called "Zaps". It allows users, without coding knowledge, to automate actions between different web services.
 <br><br><br><br>
 
 ## Result
