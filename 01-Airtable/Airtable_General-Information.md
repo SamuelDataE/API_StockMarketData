@@ -29,7 +29,7 @@ The end result is a database with daily records on the requested shares.
 |-----------   |---------------|---------------|
 | Airtable     | (yes)         | Free version available - but probably not enough capacity for automation runs. Team subscripton for USD 24 per month is required. |
 | Data Fetcher | (yes)         | Free version available - but probably not enough capacity for runs. Subscription for USD 24 per month is sufficient for collecting data of about 50 shares.        |
-| Zapier       | (yes)         | Free version available - but probably not enough capacity for runs. Subscription for USD 24 per month is sufficient for collecting data of about 50 shares.          |
+| Zapier       | (yes)         | Free version available - but probably not enough capacity for runs. Subscription for USD 24 per month is sufficient for collecting data of about 25 shares.          |
 
 ### 
 
