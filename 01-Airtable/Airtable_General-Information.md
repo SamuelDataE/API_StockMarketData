@@ -45,6 +45,6 @@ Here the detailed costs of Data Fetcher: [Pricing](https://datafetcher.com/).
 <br><br>
 Here the detailed costs of zapier: [Pricing](https://zapier.com/app/pricing).  
 <br>
-![Alt Image Text](./Images/Airtable_Premiumzapier.png "PremiumZapier")
+![Alt Image Text](./Images/Airtable_PremiumZapier.png "PremiumZapier")
 
 
