@@ -31,7 +31,7 @@ The end result is a database with daily records on the requested shares.
 | Data Fetcher | (yes)         | Free version available - but probably not enough capacity for runs. Subscription for USD 24.00 per month is sufficient for collecting data of about 50 shares.        |
 | Zapier       | (yes)         | Free version available - but probably not enough capacity for runs. Subscription for USD 29.99 per month is sufficient for collecting data of about 25 shares.          |
 
-### Already with the collection of a few shares there are monthly costs of almost USD USD 80
+### Already with the collection of a few shares there are monthly costs of almost USD 80.
 
 <br><br>
 
