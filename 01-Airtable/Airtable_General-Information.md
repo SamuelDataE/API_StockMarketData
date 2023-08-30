@@ -27,9 +27,11 @@ The end result is a database with daily records on the requested shares.
 
 | Application  | Free Version  | Note          |
 |-----------   |---------------|---------------|
-| Airtable     | (yes)         | Free version available - but probably not enough capacity for automation runs. A Team subscripton of USD 24 per month is required. |
+| Airtable     | (yes)         | Free version available - but probably not enough capacity for automation runs. Team subscripton for USD 24 per month is required. |
 | Data Fetcher | (yes)         | Free version available - but probably not enough capacity for runs. Subscription for USD 24 per month is sufficient for collecting data of about 50 shares.        |
-| Zapier       | yes           |           |
+| Zapier       | (yes)         | Free version available - but probably not enough capacity for runs. Subscription for USD 24 per month is sufficient for collecting data of about 50 shares.          |
+
+### 
 
 <br><br>
 
@@ -40,3 +42,9 @@ Here the detailed costs of Airtable: [Pricing](https://airtable.com/pricing).
 Here the detailed costs of Data Fetcher: [Pricing](https://datafetcher.com/).  
 <br>
 ![Alt Image Text](./Images/Airtable_Setup9.png "Setup9")
+<br><br>
+Here the detailed costs of zapier: [Pricing](https://zapier.com/app/pricing).  
+<br>
+![Alt Image Text](./Images/Airtable_Premiumzapier.png "PremiumZapier")
+
+
