@@ -23,4 +23,4 @@ Alpha Vantage is pleased to provide free stock API service covering the majority
 ## Premium account
 The costs for a premium account are as follows:
 
-![Alt Image Text](./Images/Premium.png "Premium Account")
+![Alt Image Text](./Images/AV_Premium.png "Premium Account")
