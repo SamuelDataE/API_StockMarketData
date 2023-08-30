@@ -19,3 +19,8 @@ This code is used in all three approaches.
 
 ## Restrictions
 Alpha Vantage is pleased to provide free stock API service covering the majority of our datasets for up to 5 API requests per minute and 100 requests per day. If you would like to target a larger API call volume, please request a premium membership.
+
+## Premium account
+The costs for a premium account are as follows:
+
+![Alt Image Text](./Images/AV_Premium.png "Premium Account")
