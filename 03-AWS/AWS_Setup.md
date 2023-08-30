@@ -3,9 +3,9 @@
 
 ### Amazon Web Service AWS
 <br><br>
-Open an account with AWS - you can do this under the following [link](https://aws.amazon.com/). Enter your details - the login process should be self-explanatory. Since AWS is chargeable, you will also be asked for your payment method. The easiest way is to store your credit card.
+Open an account with AWS - you can do this under the following [link](https://aws.amazon.com/). Enter your details - the login process should be self-explanatory. Since AWS is chargeable, you will also be asked for a payment method. The easiest way is to store your credit card.
 <br><br>
-![Alt Image Text](./Images/RP_Setup1.png "Setup1")
+![Alt Image Text](./Images/AWS_Setup1.png "Setup1")
 
 <br><br><br><br>
 
@@ -13,25 +13,27 @@ After you have registered, you will be taken to the AWS Home console. This gives
  * **Recently visited**: All tools we require for this project are marked.
  * **Cost and usage**: Gives you an overview of the running costs of your applications.
 <br>
-We now start with setting up the database. Please enter **S3** in the search field above. 
+
+We now start with setting up the database. Please enter ```S3``` in the search field above. 
 <br><br>
-![Alt Image Text](./Images/RP_Setup2.png "Setup2")
+
+![Alt Image Text](./Images/AWS_Setup2.png "Setup2")
 
 <br><br><br><br>
 
-### S3
+### S3 Database
 <br><br>
 We now open an S3 bucket to store the data loaded by Alpha Vantage. **Create bucket**.
 <br><br>
-![Alt Image Text](./Images/RP_Setup3.png "Setup3")
+![Alt Image Text](./Images/AWS_Setup3.png "Setup3")
 
 <br><br><br><br>
 
-Give your bucket a name - in this example I call the bucket ```api.alphavantage.data```. Please consider the rules für bucket naming (min. 3 characters, only lowercase letters, must begin or end with letter or number). 
+Give your bucket a name - in this example the bucket is calles ```api.alphavantage.data```. Please consider the rules für bucket naming (min. 3 characters, only lowercase letters, must begin or end with letter or number). 
 <br>
 Select the AWS Region. This allows you to select the location where your data is to be stored. Select your nearest location - the nearest location from Switzerland is Frankfurt.
 <br><br>
-![Alt Image Text](./Images/RP_Setup4.png "Setup4")
+![Alt Image Text](./Images/AWS_Setup4.png "Setup4")
 
 <br><br><br><br>
 
@@ -39,21 +41,21 @@ Leave the default selections:
  * **ACLs disabled**
  * **Block all public access**
 <br><br>
-![Alt Image Text](./Images/RP_Setup5.png "Setup5")
+![Alt Image Text](./Images/AWS_Setup5.png "Setup5")
 
 <br><br><br><br>
 
 For the further selection, leave the standard selection as well. **Create bucket**
 <br><br>
-![Alt Image Text](./Images/RP_Setup6.png "Setup6")
+![Alt Image Text](./Images/AWS_Setup6.png "Setup6")
 
 <br><br><br><br>
 
-After the bucket has been successfully created, we now create a second one. The second bucket is needed so that Athena (database) can write down the data on a folder. 
+After the bucket has been successfully created, we now create a second one. The second bucket is needed so that Athena can store the data that was queried.  
 <br>
 Open another bucket - **Create bucket**. This time give the name ```api.athena.data```. Otherwise, make the same selections as for the previous bucket.
 <br><br>
-![Alt Image Text](./Images/RP_Setup7.png "Setup7")
+![Alt Image Text](./Images/AWS_Setup7.png "Setup7")
 
 <br><br><br><br>
 
@@ -61,7 +63,7 @@ If you have also opened the second bucket, your Amazon S3 menu should look like 
 <br>
 We now start with setting up the script for loading the data form Alpha Vantage. Please enter **Lambda** in the search field. 
 <br><br>
-![Alt Image Text](./Images/RP_Setup8.png "Setup8")
+![Alt Image Text](./Images/AWS_Setup8.png "Setup8")
 
 <br><br><br><br>
 
@@ -69,7 +71,7 @@ We now start with setting up the script for loading the data form Alpha Vantage.
 <br><br>
 Create now a new function. **Create function**.
 <br><br>
-![Alt Image Text](./Images/RP_Setup9.png "Setup9")
+![Alt Image Text](./Images/AWS_Setup9.png "Setup9")
 
 <br><br><br><br>
 
@@ -80,25 +82,25 @@ To create a function do the following:
 4. Select the architecture *x86_64*
 5. **Create function**
 <br><br>
-![Alt Image Text](./Images/RP_Setup10.png "Setup10")
+![Alt Image Text](./Images/AWS_Setup10.png "Setup10")
 
 <br><br><br><br>
 
 Before we enter our script we test the application. Click on **Test**.
 <br><br>
-![Alt Image Text](./Images/RP_Setup11.png "Setup11")
+![Alt Image Text](./Images/AWS_Setup11.png "Setup11")
 
 <br><br><br><br>
 
 Configure the test event. Name the event. Beside that, nothing has to be adjusted. **Save**.
 <br><br>
-![Alt Image Text](./Images/RP_Setup12.png "Setup12")
+![Alt Image Text](./Images/AWS_Setup12.png "Setup12")
 
 <br><br><br><br>
 
 Now click on **Test** again. A new tab opens in the *Code source* menu. If you get the the same message as in the image below, everything is set up correctly so far. 
 <br><br>
-![Alt Image Text](./Images/RP_Setup13.png "Setup13")
+![Alt Image Text](./Images/AWS_Setup13.png "Setup13")
 
 <br><br><br><br>
 
@@ -107,9 +109,9 @@ Before we continue with setting up our Lambda function, we need to make sure tha
 1. Dublicate window tab
 2. Enter **IAM** in the search field
 3. Go now to **Policies**
-4. Create a new policy. **Create policy**
+4. Create a new policy - **Create policy**
 <br><br>
-![Alt Image Text](./Images/RP_Setup14.png "Setup14")
+![Alt Image Text](./Images/AWS_Setup14.png "Setup14")
 
 <br><br><br><br>
 
@@ -131,19 +133,19 @@ Now proceed as follows to set up the permission.
    This gives your Lambda function full permission for all S3 related actions in all buckets of your account, which is not optimal for security reasons. It is generally a best practice to follow the principle of least privilege (only as much as necessary). However, for this test case we use this code as it is simpler. 
 3. **Next** 
 <br><br>
-![Alt Image Text](./Images/RP_Setup15.png "Setup15")
+![Alt Image Text](./Images/AWS_Setup15.png "Setup15")
 
 <br><br><br><br>
 
 Now give the policy a name (e.g. ```Full_Access_S3_Lambda```) and write down a description (e.g. ```Full access for Lamdba in S3```). After that **Create policy**.
 <br><br>
-![Alt Image Text](./Images/RP_Setup16.png "Setup16")
+![Alt Image Text](./Images/AWS_Setup16.png "Setup16")
 
 <br><br><br><br>
 
 Go back to the IAM menu and click on the left side on **Roles**. Select your Lambda Function - the role starts with the name of your function. In this case its is *api_alphavantage-role-aju6yhkx*.
 <br><br>
-![Alt Image Text](./Images/RP_Setup17.png "Setup17")
+![Alt Image Text](./Images/AWS_Setup17.png "Setup17")
 
 <br><br><br><br>
 
@@ -154,23 +156,25 @@ Under *Permissions* you can now click on **Add permissions**.
 <br>
 Once you have added the respective policy, it should appear in your list. 
 <br><br>
-![Alt Image Text](./Images/RP_Setup18.png "Setup18")
+
+![Alt Image Text](./Images/AWS_Setup18.png "Setup18")
 
 <br><br><br><br>
 
 We use Python to download the data. In Python we use the *requests* library (an already prefabricated Python package). In AWS Lambda, not all Python libraries are available by default. Therefore, you need to provide them together with your Lambda code. For this we need to do the following steps:
-1. Open your local *Command Prompt*. To do this, click **Win + R** on your keyboard. Windows open - enter **cmd**. **OK**.
-2. Use the command **cd** followed by the path to navigate to the directory where you want to create a new directory. For example: **cd C:\Users\YourName\Documents**. In the image below, I have entered the path as it would look on my PC. When you have entered this. Press **Enter**.
-3. A new line now appears and you can see that the working directory has now been changed according to my entry under step #2. 
+1. Open your local *Command Prompt*. To do this, click **Win + R** on your keyboard. Windows open - enter ```cmd```. **OK**.
+2. Use the command **cd** followed by the path to navigate to the directory where you want to create a new directory.
+   For example: **cd C:\Users\YourName\Documents**. In the image below, I have entered the path as it would look on my PC. When you have entered this. Press **Enter**.
+4. A new line now appears and you can see that the working directory has now been changed according to my entry under step #2. 
 <br><br>
-![Alt Image Text](./Images/RP_Setup19.png "Setup19")
+![Alt Image Text](./Images/AWS_Setup19.png "Setup19")
 
 
 <br><br><br><br>
 
 Now copy the following code into your *cmd*: ```mkdir my_lambda_package```. Press **Enter**.
 <br><br>
-![Alt Image Text](./Images/RP_Setup20.png "Setup20")
+![Alt Image Text](./Images/AWS_Setup20.png "Setup20")
 
 <br><br><br><br><br>
 
@@ -178,7 +182,7 @@ We have now opened the folder. Now we will download the *requests* library.
 1. Change the working directory. You can do this by entering the following code into the console ```cd my_lambda_package```. Press enter.
 2. Install the request library. Type ```pip install requests -t .``` and execute it by pressing enter.
 <br><br>
-![Alt Image Text](./Images/RP_Setup22.png "Setup22")
+![Alt Image Text](./Images/AWS_Setup22.png "Setup22")
 
 <br><br><br><br>
 
@@ -186,7 +190,7 @@ Now check in your folder **my_lambda_package** whether the download worked.
 <br>
 If you see these folders, it worked.
 <br><br>
-![Alt Image Text](./Images/RP_Setup23.png "Setup23")
+![Alt Image Text](./Images/AWS_Setup23.png "Setup23")
 
 <br><br><br><br>
 
@@ -195,22 +199,22 @@ Now open your tab with the AWS Lambda function.
 2. Select **Export function**
 3. Choose **Download deployment package**  
 <br><br>
-![Alt Image Text](./Images/RP_Setup25.png "Setup25")
+![Alt Image Text](./Images/AWS_Setup25.png "Setup25")
 <br><br><br><br>
 
 Now open the folder where the file was downloaded - probably in the *Downloads* folder - and copy the lambda_function.py file (*Ctrl + C*) and save it in your my_lambda_package folder (*Ctrl +V*).
 <br><br>
-![Alt Image Text](./Images/RP_Setup26.png "Setup26")
+![Alt Image Text](./Images/AWS_Setup26.png "Setup26")
 
 <br><br><br><br>
 
 We now need to create a zip file.
 1. Go to your *my_lambda_package* folder.
-2. Mark all folders (*Ctrl + A*)
+2. Mark all folders - including lambda_functions.py (*Ctrl + A*)
 3. Left click and select **Compress to ZIP file**.
 4. Give the zip file the name **my_Lambda_package.zip**.  
 <br><br>
-![Alt Image Text](./Images/RP_Setup24.png "Setup24")
+![Alt Image Text](./Images/AWS_Setup24.png "Setup24")
 <br>
 The folder marked in green is the new zip file created.
 <br><br><br><br>
@@ -219,16 +223,16 @@ Now go back to the Lambda function in AWS.
 1. Go to **Upload from**
 2. Select **.zip file**
 3. Click on **Upload**
-4. Select your zip file (*my_lambda_package.zip)
+4. Select your zip file (*my_lambda_package.zip*)
 5. **Save**
 <br><br>
-![Alt Image Text](./Images/RP_Setup27.png "Setup27")
+![Alt Image Text](./Images/AWS_Setup27.png "Setup27")
 
 <br><br><br><br>
 
 Your *Code source* should now contain the same files as shown in the image below.
 <br><br>
-![Alt Image Text](./Images/RP_Setup28.png "Setup28")
+![Alt Image Text](./Images/AWS_Setup28.png "Setup28")
 
 <br><br><br><br>
 
@@ -278,13 +282,13 @@ def lambda_handler(event, context):
 ```
 <br>
 
-If your bucket name in S3 is not **api.alphavantage.data**. Change the code accordingly. The name of your bucket in which you want to save the data must be in the code. 
+If your bucket name in S3 is not **api.alphavantage.data**. Change the code accordingly (line #10). The name of your bucket in which you want to save the data must be in the code. 
 
 <br><br><br><br>
 
 Enter the code in AWS Lambda. You can overwrite / delete the previous code. 
 <br><br>
-![Alt Image Text](./Images/RP_Setup29.png "Setup29")
+![Alt Image Text](./Images/AWS_Setup29.png "Setup29")
 
 <br><br><br><br>
 
@@ -293,15 +297,15 @@ Before we run the code, we need to do some further configurations in AWS Lambda.
 2. Click on **Environment variables**
 3. Click on **Edit**
 <br><br>
-![Alt Image Text](./Images/RP_Setup30.png "Setup30")
+![Alt Image Text](./Images/AWS_Setup30.png "Setup30")
 
 <br><br><br><br>
 
 In our Python code we refer to these environment variables. Therefore, we now need to define them.
-1. The first variable is your API key. For this, enter ```API_Key``` in the key name. Now enter your API Key from Alpha Vantage in Value. How to request that Key is described [here](../00-Alpha_Vantage/Alpha-Vantage_General-Information.md).
-2. The second variable are your symbols. Enter in Key ```Symbols```. In the value field you can now enter all the symbols of the shares for which you want to have the data. How to determine the symbols of the respective shares is described under [Alpha-Vantage_Stock Selection](../00-Alpha_Vantage/Alpha-Vantage_Stock-Selection.md).
+1. The first variable is your API key. For this, enter ```API_Key``` in the **key** name. Now enter your API key from Alpha Vantage in **Value**. How to request that key is described [here](../00-Alpha_Vantage/Alpha-Vantage_General-Information.md).
+2. The second variable are your symbols. Enter in **Key** ```Symbols```. In the **Value** field you can now enter all the symbols of the shares for which you want to have the data. How to determine the symbols of the respective shares is described under [Alpha-Vantage_Stock Selection](../00-Alpha_Vantage/Alpha-Vantage_Stock-Selection.md). Separate the symbols with my comma.
 <br><br>
-![Alt Image Text](./Images/RP_Setup31.png "Setup31")
+![Alt Image Text](./Images/AWS_Setup31.png "Setup31")
 
 <br><br><br><br>
 
@@ -310,15 +314,15 @@ The second setting change we need to make is the timeout. Currently, the Lambda 
 2. Click on **General configuraiton**
 3. **Edit**
 <br><br>
-![Alt Image Text](./Images/RP_Setup32.png "Setup32")
+![Alt Image Text](./Images/AWS_Setup32.png "Setup32")
 
 <br><br><br><br>
 
-In this example, the timeout has now been increased to 3 minutes. Depending on the number of shares that are queried, a higher time must be selected.
+In this example, the timeout has now been increased to 3 minutes. Depending on the number of shares that are queried, a higher timeout must be selected.
 1. Increase the **timeout** time
 2. **Save**
 <br><br>
-![Alt Image Text](./Images/RP_Setup33.png "Setup33")
+![Alt Image Text](./Images/AWS_Setup33.png "Setup33")
 
 <br><br><br><br>
 
@@ -326,9 +330,11 @@ Now we have made all the configurations and can run and test the code.
 1. Click on **Deploy**. This saves the code.
 2. Click on **Test**.
 <br>
+
 A new tab opens (*Execution results*). If the message **Data processig complete!** appears and you see the data of the shares you requested, everything has worked!
 <br><br>
-![Alt Image Text](./Images/RP_Setup34.png "Setup34")
+
+![Alt Image Text](./Images/AWS_Setup34.png "Setup34")
 <br>
 Please note that whenever you change your code, you must click **Deploy** to save your changes.
 
@@ -339,13 +345,13 @@ We now want to check whether the data has also been saved in the S3 bucket.
 2. Click on Buckets
 3. Select the bucket on which the data was written down according to the code in Lambda
 <br><br>
-![Alt Image Text](./Images/RP_Setup35.png "Setup35")
+![Alt Image Text](./Images/AWS_Setup35.png "Setup35")
 
 <br><br><br><br>
 
 The files were loaded correctly into the bucket. It worked.
 <br><br>
-![Alt Image Text](./Images/RP_Setup36.png "Setup36")
+![Alt Image Text](./Images/AWS_Setup36.png "Setup36")
 
 <br><br><br><br>
 ### Amazon EventBridge
@@ -355,35 +361,38 @@ We have now set up the Lambda funciton. The next step is to set up a rule on Ama
 2. Select **EventBridge Rule**
 3. **Create rule**
 <br><br>
-![Alt Image Text](./Images/RP_Setup37.png "Setup37")
+![Alt Image Text](./Images/AWS_Setup37.png "Setup37")
 
 <br><br><br><br>
 
 Now set up the rule as follows:
-1. Name the rule
-2. Write a description
+1. Name the rule ```API.daily.executer```
+2. Write a description ```Shall have the lambda code executed daily.```
 3. Select **Schedule**
 4. **Continue in EventBrdige Scheduler**
 <br><br>
-![Alt Image Text](./Images/RP_Setup38.png "Setup38")
+![Alt Image Text](./Images/AWS_Setup38.png "Setup38")
 
-<br><br><br><br
+<br><br><br><br>
 
 We will now define the timetable:
 1. Select **Recurring schedule**
 2. As a schedule type we are using **Cron-based schedule**
-3. We can enter our schedule in the cron expression. In this example, the event is triggered every day at 0530 am. This setting can be entered with ```cron(0 6 * * ? *)```. You can change this to suit your needs.
+3. We can enter our schedule in the cron expression. In this example, the event is triggered every day at 0530 am. This setting can be entered with ```cron(30 5 * * ? *)```. You can change this to suit your needs.
 4. Select whether the event can be triggered in a flexible time window. Since I do not need the data exactly at 0530am, I have selected *15 minutes* there. 
 <br><br>
-![Alt Image Text](./Images/RP_Setup39.png "Setup39")
+![Alt Image Text](./Images/AWS_Setup39.png "Setup39")
 
-<br><br><br><br
+<br><br><br><br>
 
 The next part is to define the timeframe:
 1. Select the start date (has to be in the future)
 2. Select the end date (has to be after the start date)
+<br>
+Both dates are optional.
 <br><br>
-![Alt Image Text](./Images/RP_Setup40.png "Setup40")
+
+![Alt Image Text](./Images/AWS_Setup40.png "Setup40")
 
 <br><br><br><br>
 
@@ -392,36 +401,19 @@ Now you will be asked to select a target:
 2. Select **AWS Lambda**
 3. **Next**
 <br><br>
-![Alt Image Text](./Images/RP_Setup41.png "Setup41")
+![Alt Image Text](./Images/AWS_Setup41.png "Setup41")
 
 <br><br><br><br>
-
-Now you will be asked to select a target:
-1. **Templated targets**
-2. Select **AWS Lambda**
-3. **Next**
-<br><br>
-![Alt Image Text](./Images/RP_Setup41.png "Setup41")
 
 Select your Lambda function in the drop down menu. In this example its *api_alphavantage*. **Next**.
 <br><br>
-![Alt Image Text](./Images/RP_Setup42.png "Setup42")
+![Alt Image Text](./Images/AWS_Setup42.png "Setup42")
 
 <br><br><br><br>
 
-In the following selection you only have to decide what happens to your EventBridge Scheduler after it has finished (when the end date has been reached). In this example I want to keep it, so I selected *None*. The other items can be left as they are. 
+In the following selection you only have to decide what happens to your *EventBridge Scheduler* after it has finished (when the end date has been reached). In this example I want to keep it, so I selected *None*. The other items can be left as they are. 
 <br><br>
-![Alt Image Text](./Images/RP_Setup43.png "Setup43")
-
-<br><br><br><br>
-
-In order for the EventBridge Scheduler to access your Lambda function, it needs the appropriate authorisation in *IAM*. AWS creates this permission automatically.
-1. Click **Create new role for this schedule**.
-2. **Next**.
-<br>
-Finish setup and **Create schedule**.
-<br><br>
-![Alt Image Text](./Images/RP_Setup44.png "Setup44")
+![Alt Image Text](./Images/AWS_Setup43.png "Setup43")
 
 <br><br><br><br>
 
@@ -431,23 +423,36 @@ In order for the EventBridge Scheduler to access your Lambda function, it needs 
 <br>
 Finish setup and **Create schedule**.
 <br><br>
-![Alt Image Text](./Images/RP_Setup45.png "Setup45")
+
+![Alt Image Text](./Images/AWS_Setup44.png "Setup44")
+
+<br><br><br><br>
+
+In order for the EventBridge Scheduler to access your Lambda function, it needs the appropriate authorisation in *IAM*. AWS creates this permission automatically.
+1. Click **Create new role for this schedule**.
+2. **Next**.
+<br>
+
+Finish setup and **Create schedule**.
+<br><br>
+
+![Alt Image Text](./Images/AWS_Setup45.png "Setup45")
 
 <br><br><br><br>
 
 The set-up is now complete. In Amazon EventBridge under *Schedules* you can check your rule and change it if necessary. The data is now downloaded daily to your S3 bucket.
 <br><br>
-![Alt Image Text](./Images/RP_Setup46.png "Setup46")
+![Alt Image Text](./Images/AWS_Setup46.png "Setup46")
 
 <br><br><br><br>
 
 ### AWS Athena
 <br><br>
-In the S3 bucket, a separate file is created for each record (there is one record per day for each share). Therefore, this structure cannot be used for analysis. We therefore need the Athena. This is an interactive query service that allows you to analyse data directly in Amazon S3. 
-<br>
+In the S3 bucket, a separate file is created for each record (there is one record per day for each share). Therefore, this structure cannot be used for analysis. We therefore need the *Athena* application. This is an interactive query service that allows you to analyse data directly in Amazon S3. 
+<br><br>
 The data is stored in the S3 bucket as follows:
 <br><br>
-![Alt Image Text](./Images/RP_Setup47.png "Setup47")
+![Alt Image Text](./Images/AWS_Setup47.png "Setup47")
 
 <br><br><br><br>
 
@@ -457,12 +462,12 @@ Before we do the setup in Athena, we need to give the application the appropriat
 2. Open **Policies**.
 3. **Create policy**. 
 <br><br>
-![Alt Image Text](./Images/RP_Setup481.png "Setup481")
+![Alt Image Text](./Images/AWS_Setup481.png "Setup481")
 
 <br><br><br><br>
 
 Secify permissions:
-1. Go to **Json**
+1. Go to **JSON**
 2. Delete default code
 3. Enter the following code in the *policy editor*:
 ```
@@ -486,7 +491,7 @@ Secify permissions:
 ```
 4. **Next**
 <br><br>
-![Alt Image Text](./Images/RP_Setup51.png "Setup51")
+![Alt Image Text](./Images/AWS_Setup51.png "Setup51")
 
 <br><br><br><br>
 
@@ -494,15 +499,15 @@ Review and create:
 1. Name the policy ```Full_Access_S3_Athena```
 2. At the bottom of the page - **Create policy**
 <br><br>
-![Alt Image Text](./Images/RP_Setup52.png "Setup52")
+![Alt Image Text](./Images/AWS_Setup52.png "Setup52")
 
 <br><br><br><br>
 
-Go now back to your IAM console.
-2. Open **Roles**.
-3. **Create role**. 
+Go now back to your *IAM* console.
+1. Open **Roles**
+2. **Create role**
 <br><br>
-![Alt Image Text](./Images/RP_Setup481.png "Setup481")
+![Alt Image Text](./Images/AWS_Setup48.png "Setup48")
 
 <br><br><br><br>
 
@@ -512,25 +517,25 @@ Select trusted entity:
 3. Tick the newly appeared box **Glue**
 4. **Next**
 <br><br>
-![Alt Image Text](./Images/RP_Setup49.png "Setup49")
+![Alt Image Text](./Images/AWS_Setup49.png "Setup49")
 
 <br><br><br><br>
 
 Add permission - select your newly created policy **Full_Access_S3_Athena**. At the bottom of the page - click **Next**. 
 <br><br>
-![Alt Image Text](./Images/RP_Setup53.png "Setup53")
+![Alt Image Text](./Images/AWS_Setup53.png "Setup53")
 
 <br><br><br><br>
 
 Name the role ```S3_Access_rights_Athena```. At the bottom of the page - click **Create role**. 
 <br><br>
-![Alt Image Text](./Images/RP_Setup54.png "Setup54")
+![Alt Image Text](./Images/AWS_Setup54.png "Setup54")
 
 <br><br><br><br>
 
 In *IAM* under *Roles* you see now the newly created role for Athena. 
 <br><br>
-![Alt Image Text](./Images/RP_Setup55.png "Setup55")
+![Alt Image Text](./Images/AWS_Setup55.png "Setup55")
 
 <br><br><br><br>
 
@@ -539,32 +544,24 @@ Now that we have given permission, we can switch to the Athena application.
 1. Enter ```Athena``` in the search field
 2. **Lauchn query editor**
 <br><br>
-![Alt Image Text](./Images/RP_Setup56.png "Setup56")
+![Alt Image Text](./Images/AWS_Setup56.png "Setup56")
 
 <br><br><br><br>
 
 You are now in the *Query editor*. Before we retrieve the data, we have to make sure that the data is stored in the right place.
-1. go to the **Settings**
+1. Go to the **Settings**
 2. Press **Manage**
 <br><br>
-![Alt Image Text](./Images/RP_Setup57.png "Setup57")
-
-<br><br><br><br>
-
-You are now in the *Query editor*. Before we retrieve the data, we have to make sure that the data is stored in the right place.
-1. go to the **Settings**
-2. Press **Manage**
-<br><br>
-![Alt Image Text](./Images/RP_Setup57.png "Setup57")
+![Alt Image Text](./Images/AWS_Setup57.png "Setup57")
 
 <br><br><br><br>
 
 Manage settings:
-1. Press on **Browse S3**.
-2. Select now the bucket in S3 where you want to store the result from Athena. We have opened a bucket in a earlier stage for this case. In this example the bucket is called *api.athena.data*
+1. Click on **Browse S3**.
+2. Select now the bucket in S3 where you want to store the result from Athena. We have opened a bucket in a earlier stage for this case. In this example the bucket is called *api.athena.data*.
 3. **Save** settings.
 <br><br>
-![Alt Image Text](./Images/RP_Setup58.png "Setup58")
+![Alt Image Text](./Images/AWS_Setup58.png "Setup58")
 
 <br><br><br><br>
 
@@ -599,45 +596,51 @@ WITH SERDEPROPERTIES (
 LOCATION 's3://api.alphavantage.data/';
 ```
 <br>
+
 If your bucket has a different name than ```api.alphavantage.data```, you need to adjust the last line of code accordingly.
-<br>
+<br><br>
+
 Press **Run** when you have entered the code. If everything has worked, it shows at the bottom under *Query results* that the code has been **Completed**. In addition, you will now see on the left side that a new table has been created.
 <br><br>
-![Alt Image Text](./Images/RP_Setup59.png "Setup59")
+
+![Alt Image Text](./Images/AWS_Setup59.png "Setup59")
 
 <br><br><br><br>
 
 Do the following to save this code;
-1. Press on the three dots next to your query name.
-2. Name your query ```Create table```.
+1. Press on the three dots next to your query name
+2. Name your query ```Create table```
 3. **Save query**
 <br><br>
-![Alt Image Text](./Images/RP_Setup60.png "Setup60")
+![Alt Image Text](./Images/AWS_Setup60.png "Setup60")
 
 <br><br><br><br>
 
 Now we can enter a new query to pull out the data;
-1. Click on the **+**sign to open a new query
+
+1. Click on the + sign to open a new query
 2. Enter the following code to pull out all the data:
    ```SELECT * FROM stock_data;```
 3. At the bottom you now see the result
 4. You can now copy the data in your csv file, excel etc.
 <br><br>
-![Alt Image Text](./Images/RP_Setup61.png "Setup61")
+![Alt Image Text](./Images/AWS_Setup61.png "Setup61")
 <br>
+
 Safe this query and name it ```Download data```.
 
 <br><br><br><br>
 
 If you have new data in your S3 bucket, which you have from Alpha Vantage, you need to reload the table. If you want to delete the table completely first, you can proceed as follows:
-1. Click again on the **+**sign to open a third query
+1. Click again on the + sign to open a third query
 2. Enter the following code to pull out all the data:
    ```SELECT * FROM stock_data;```
 3. **Run** the code.
 4. You will now see on the left side that there is no longer a table.
 <br><br>
-![Alt Image Text](./Images/RP_Setup62.png "Setup62")
+![Alt Image Text](./Images/AWS_Setup62.png "Setup62")
 <br>
+
 Safe this query and name it ```Delete table```.
 
 <br><br><br><br>
@@ -646,7 +649,5 @@ The way we have set up Athena now, the data can be downloaded in a simple way. D
 
 <br><br><br><br>
 
-### AWS is now fully set up for our project.
-<br><br>
-Possible sources of error if something doesn't work often have to do with the permissions in *IAM*. If something doesn't work, take a look at these steps again. 
+### AWS is now fully set up
 

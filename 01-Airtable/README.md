@@ -1,5 +1,5 @@
 ## General information
-This folder shows how the stock exchange data can be downloaded with the application Airtable. No programming knowledge is required for this.
+This folder shows how the stock exchange data can be downloaded with the application Airtable. No programming knowledge is required for this approach.
 
 Relevant files in this folder:
 1. [Airtable_General-Information](Airtable_General-Information.md)
