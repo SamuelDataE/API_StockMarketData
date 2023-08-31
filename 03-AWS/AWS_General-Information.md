@@ -67,7 +67,7 @@ Here the detailed costs of AWS Athena: [Pricing](https://aws.amazon.com/athena/p
 
 ### Personal cost overview
 <br>
-Only with the information above, it is very difficult to get an estimate of how the costs will behave for our project. AWS is designed to handle a very high volume of data and use a lot of computing power. Our use case, which does not require much storage or computing power, has therefore not triggered any costs for most applications after one month. Here an overview of my costs:
+Only with the information above, it is very difficult to get an estimate of how the costs will behave for our project. AWS is designed to handle a very high volume of data and use a lot of computing power. Our use case, which does not require much storage or computing power, has therefore not triggered any costs after one month. Here an overview of my costs:
 <br><br>
 Duration: 1 month
 
