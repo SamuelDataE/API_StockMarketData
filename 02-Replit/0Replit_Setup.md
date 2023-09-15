@@ -38,6 +38,18 @@ Once you have created your Repl, the following screen appears in which you manag
 
 <br><br><br><br>
 
+Within Python, we use two predefined programs, which we can incorporate into our code. To install these, go to **Tools** and click on **Packages**.
+
+Install the following packages:
+
+- requests
+- replit 
+<br><br>
+![Alt Image Text](./Images/RP_Setup999.png "Setup5")
+
+
+<br><br><br><br>
+
 Before we start writing the Python script, we first create some support files that are necessary for the script to run. On the left side next to **Files** there is a **+** sign. Click on this sign and create a new file with the name ```config.txt```. 
 <br><br>
 ![Alt Image Text](./Images/RP_Setup5.png "Setup5")
