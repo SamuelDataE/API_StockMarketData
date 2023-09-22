@@ -465,7 +465,7 @@ Click on the button **Neuen CRONJOB anlegen**.
 
 1. Name your CRONJOB
 2. Enter your URL address - make sure that the URL starts with **https://** and ends with **/fetchdata**. See example in the figure below.
-3. Define the scheudle
+3. Define the schedule
 4. Safe CRONJOB. **CRONJOB speichern**
 <br><br>
 ![Alt Image Text](./Images/RP_Setup28.png "Setup28")
